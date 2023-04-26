@@ -8,5 +8,8 @@
       <SourceFile OriginalFile="wenglor-OY1P303P0102-con-pic.png" TranslationFile="JQK77JOH.ext" />
       <SourceFile OriginalFile="wenglor-OY1P303P0102-icon.png" TranslationFile="EXRXEJU9.ext" />
     </Module>
+    <Module ModuleID="FBD.IOLink.GenericDeviceDTM.DTMCore.AI IODD1.1" Version="1.8.6" OrderNumber="AI IODD1.1">
+      <SourceFile OriginalFile="Murrelektronik-5XXX-00501-1110000-20190524-IODD1.1.xml" TranslationFile="VFUFG7MD.ext" />
+    </Module>
   </Modules>
 </ExternalHardware>

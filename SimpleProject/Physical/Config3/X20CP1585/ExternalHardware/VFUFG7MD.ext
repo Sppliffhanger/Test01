@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IODevice xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD1.1.xsd">
+	<DocumentInfo version="V1.8.6" releaseDate="2019-05-24" copyright="Copyright 2015, Murrelektronik GmbH"/>
+	<ProfileHeader>
+		<ProfileIdentification>IO Device Profile</ProfileIdentification>
+		<ProfileRevision>1.1</ProfileRevision>
+		<ProfileName>Device Profile for IO Devices</ProfileName>
+		<ProfileSource>IO-Link Consortium</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>1</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>IODD</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity vendorId="303" vendorName="Murrelektronik GmbH" deviceId="262400">
+			<VendorText textId="TI_VendorText"/>
+			<VendorUrl textId="TI_VendorUrl"/>
+			<VendorLogo name="Murrelektronik-logo.png"/>
+			<DeviceName textId="TI_Device"/>
+			<DeviceFamily textId="TI_DeviceFamily"/>
+			<DeviceVariantCollection>
+				<DeviceVariant productId="5000-00501-1110000" deviceSymbol="Murrelektronik-IOL_converter_straight-pic.png" deviceIcon="Murrelektronik-IOL_converter_straight-icon.png">
+					<Name textId="TN_Product_Name_str"/>
+					<Description textId="TD_Product_Descr_str"/>
+				</DeviceVariant>
+				<DeviceVariant productId="5004-00501-1110000" deviceSymbol="Murrelektronik-IOL_converter_va-pic.png" deviceIcon="Murrelektronik-IOL_converter_va-icon.png">
+					<Name textId="TN_Product_Name_va"/>
+					<Description textId="TD_Product_Descr_va"/>
+				</DeviceVariant>
+			</DeviceVariantCollection>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Features blockParameter="true" dataStorage="true">
+				<SupportedAccessLocks localParameterization="false" parameter="true" localUserInterface="false" dataStorage="true"/>
+			</Features>
+			<DatatypeCollection>
+				<Datatype id="D_ParamDiagnosisSetup" xsi:type="BooleanT" >
+					<SingleValue xsi:type="BooleanValueT" value="false">
+						<Name textId="TN_DiagnosisSetupBit_OFF" />
+					</SingleValue>
+					<SingleValue xsi:type="BooleanValueT" value="true">
+						<Name textId="TN_DiagnosisSetupBit_ON" />
+					</SingleValue>
+				</Datatype>
+			</DatatypeCollection>
+			<VariableCollection>
+				<StdVariableRef id="V_DirectParameters_1"/>
+				<StdVariableRef id="V_DirectParameters_2"/>
+				<StdVariableRef id="V_SystemCommand" >
+					<StdSingleValueRef value="128"/>
+					<StdSingleValueRef value="130"/>
+				</StdVariableRef>
+				<StdVariableRef id="V_DeviceAccessLocks">
+					<StdRecordItemRef subindex="2" defaultValue="0"/>
+				</StdVariableRef>
+				<StdVariableRef id="V_VendorName" defaultValue="Murrelektronik GmbH" fixedLengthRestriction="19"/>
+				<StdVariableRef id="V_VendorText" defaultValue="http://www.murrelektronik.com" fixedLengthRestriction="29"/>
+				<StdVariableRef id="V_ProductName" defaultValue="IOL AI-I-STR-4..20mA-UNI" fixedLengthRestriction="34"/>
+				<StdVariableRef id="V_ProductID" fixedLengthRestriction="18"/>
+				<StdVariableRef id="V_ProductText" defaultValue="IOL Analog Conv. straight M12 AI 4..20mA 16Bit IOL V1.12"/>
+				<StdVariableRef id="V_SerialNumber"/>
+				<StdVariableRef id="V_HardwareRevision" fixedLengthRestriction="5"/>
+				<StdVariableRef id="V_FirmwareRevision" fixedLengthRestriction="10"/>
+				<StdVariableRef id="V_ApplicationSpecificTag" fixedLengthRestriction="32" excludedFromDataStorage = "false"/>
+				<StdVariableRef id="V_DeviceStatus" defaultValue="0"/>
+				<StdVariableRef id="V_DetailedDeviceStatus" fixedLengthRestriction="6"/>
+				<StdVariableRef id="V_ProcessDataInput"/>
+				<Variable index="64" accessRights="rw" id="V_ParamDiagnosisSetup" dynamic="false" modifiesOtherVariables="false" excludedFromDataStorage = "false">
+					<Datatype xsi:type="RecordT" bitLength="16" subindexAccessSupported="false">
+						<RecordItem subindex="1" bitOffset="0">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_0"/>
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="1" >
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_1"/>
+						</RecordItem>
+						<RecordItem subindex="3" bitOffset="2">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_2"/>
+						</RecordItem>
+						<RecordItem subindex="4" bitOffset="3">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_3"/>
+						</RecordItem>
+						<RecordItem subindex="5" bitOffset="4">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_4"/>
+						</RecordItem>
+						<RecordItem subindex="6" bitOffset="5">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_5"/>
+						</RecordItem>
+						<RecordItem subindex="7" bitOffset="6">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_6"/>
+						</RecordItem>
+						<RecordItem subindex="8" bitOffset="7">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_7"/>
+						</RecordItem>
+						<RecordItem subindex="9" bitOffset="8">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_8"/>
+						</RecordItem>
+						<RecordItem subindex="10" bitOffset="9">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_9"/>
+						</RecordItem>
+						<RecordItem subindex="11" bitOffset="10">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_10"/>
+						</RecordItem>
+						<RecordItem subindex="12" bitOffset="11">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_11"/>
+						</RecordItem>
+						<RecordItem subindex="13" bitOffset="12">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_12"/>
+						</RecordItem>
+						<RecordItem subindex="14" bitOffset="13">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_13"/>
+						</RecordItem>
+						<RecordItem subindex="15" bitOffset="14">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_14"/>
+						</RecordItem>
+						<RecordItem subindex="16" bitOffset="15">
+							<DatatypeRef datatypeId="D_ParamDiagnosisSetup"/>
+							<Name textId="TN_ParamDiagnosisSetup_Bit_15"/>
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="1"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="2"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="3"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="4"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="5"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="6"/>
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="7"/>
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="8"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="9"/>
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="10"/>	
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="11"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="12"/>
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="13"/>
+					<RecordItemInfo defaultValue="0" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="14"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="15"/>
+					<RecordItemInfo defaultValue="1" excludedFromDataStorage="false" modifiesOtherVariables="false" subindex="16"/>	
+					<Name textId="TN_ParamDiagnosisSetup"/>
+					<Description textId="TD_ParamDiagnosisSetup"/>
+				</Variable>			
+				<Variable index="65" accessRights="rw" id="V_ParamLowerLimit" defaultValue="-32768" dynamic="false" modifiesOtherVariables="false" excludedFromDataStorage = "false">
+					<Datatype xsi:type="IntegerT" bitLength="16">
+						<ValueRange lowerValue="-32768" upperValue="32767"/>
+					</Datatype>
+					<Name textId="TN_ParamLowerLimit"/>
+				</Variable>
+				<Variable index="66" accessRights="rw" id="V_ParamUpperLimit" defaultValue="32767" dynamic="false" modifiesOtherVariables="false" excludedFromDataStorage = "false">
+					<Datatype xsi:type="IntegerT" bitLength="16">
+						<ValueRange lowerValue="-32768" upperValue="32767"/>
+					</Datatype>
+					<Name textId="TN_ParamUpperLimit"/>
+				</Variable>
+				<Variable index="67" accessRights="rw" id="V_ParamFilterTime" defaultValue="0" dynamic="false" modifiesOtherVariables="false" excludedFromDataStorage = "false">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<ValueRange lowerValue="0" upperValue="64"/>
+					</Datatype>
+					<Name textId="TN_ParamFilterTime"/>
+				</Variable>
+			</VariableCollection>
+			<ProcessDataCollection>				
+				<ProcessData id="P_ProcessData">
+					<ProcessDataIn id="PI_ProcessDataIn" bitLength="16">
+						<Datatype bitLength="16" xsi:type="RecordT" subindexAccessSupported="false">
+							<RecordItem subindex="1" bitOffset="0">
+								<SimpleDatatype xsi:type="IntegerT" bitLength="16">
+									<ValueRange upperValue="32511" lowerValue="-4864"/>
+									<SingleValue value="32767">
+										   <Name textId="TN_for_overrun_message"/>
+									</SingleValue>
+									<SingleValue value="-32768">
+										   <Name textId="TN_for_underrun_message"/>
+									</SingleValue>
+								</SimpleDatatype>
+								<Name textId="TN_PI_Value"/>
+							</RecordItem>
+						</Datatype>
+						<Name textId="TN_PI"/>
+					</ProcessDataIn>
+				</ProcessData>
+			</ProcessDataCollection>
+			<EventCollection>
+				<StdEventRef code="16912"/>
+				<StdEventRef code="20752"/>
+				<StdEventRef code="20753"/>
+				<StdEventRef code="25376"/>
+				<StdEventRef code="30464"/>
+				<Event type="Error" code="6144"> 
+					<Name textId="TN_Event_6144"/>
+				</Event>
+				<Event type="Error" code="6145">
+					<Name textId="TN_Event_6145"/>
+				</Event>
+				<Event type="Warning" code="6146">
+					<Name textId="TN_Event_6146"/>
+				</Event>
+				<Event type="Warning" code="6147">
+					<Name textId="TN_Event_6147"/>
+				</Event>
+				<Event type="Error" code="6148">
+					<Name textId="TN_Event_6148"/>
+				</Event>
+				<Event type="Warning" code="6149">
+					<Name textId="TN_Event_6149"/>
+				</Event>
+				<Event type="Warning" code="6150">
+					<Name textId="TN_Event_6150"/>
+				</Event>
+				<Event type="Error" code="6153">
+					<Name textId="TN_Event_6153"/>
+				</Event>
+				<Event type="Error" code="6154">
+					<Name textId="TN_Event_6154"/>
+				</Event>
+				<Event type="Error" code="6155">
+					<Name textId="TN_Event_6155"/>
+				</Event>
+				<Event type="Warning" code="6176">
+					<Name textId="TN_Event_6176"/>
+				</Event>
+				<Event type="Error" code="6177">
+					<Name textId="TN_Event_6177"/>
+				</Event>
+			</EventCollection>
+			<UserInterface>
+				<ProcessDataRefCollection>	
+					<ProcessDataRef processDataId="PI_ProcessDataIn">
+						<ProcessDataRecordItemInfo subindex="1" gradient="0.0005787" offset="4.0" unitCode="1211" displayFormat="Dec.2" />
+					</ProcessDataRef>	
+				</ProcessDataRefCollection>
+				<MenuCollection>
+					<Menu id="M_Ident">
+						<VariableRef variableId="V_VendorName"/>
+						<VariableRef variableId="V_VendorText"/>
+						<VariableRef variableId="V_ProductName"/>
+						<VariableRef variableId="V_ProductID"/>
+						<VariableRef variableId="V_ProductText"/>
+						<VariableRef variableId="V_HardwareRevision"/>
+						<VariableRef variableId="V_FirmwareRevision"/>
+						<VariableRef variableId="V_DeviceAccessLocks"/>
+						<VariableRef variableId="V_ApplicationSpecificTag"/>
+					</Menu>
+					<Menu id="M_Diag">
+						<VariableRef variableId="V_DeviceStatus" displayFormat="Hex"/>
+						<VariableRef variableId="V_DetailedDeviceStatus" displayFormat="Hex"/>
+					</Menu>						
+					<Menu id="M_Observe">							
+						<VariableRef variableId="V_ParamLowerLimit" displayFormat="Hex" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_ParamUpperLimit" displayFormat="Hex" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_ParamFilterTime" displayFormat="Hex" accessRightRestriction="ro"/>
+					</Menu>					
+					<Menu id="M_Param">
+						<VariableRef variableId="V_ParamLowerLimit" displayFormat="Hex"/>
+						<VariableRef variableId="V_ParamUpperLimit" displayFormat="Hex"/>
+						<VariableRef variableId="V_ParamFilterTime" displayFormat="Hex"/>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="130"/>
+						</VariableRef>
+						<MenuRef menuId="M_Diagnose"/>		
+					</Menu>		
+					<Menu id="M_Diagnose">
+						<Name textId="TN_Diagnose"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="2" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="3" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="4" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="5" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="6" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="9" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="12" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="15" displayFormat="Hex"/>
+						<RecordItemRef variableId="V_ParamDiagnosisSetup" subindex="16" displayFormat="Hex"/>
+					</Menu>
+				</MenuCollection>
+				<ObserverRoleMenuSet>
+					<IdentificationMenu menuId="M_Ident"/>
+					<ObservationMenu menuId="M_Observe"/>
+					<DiagnosisMenu menuId="M_Diag"/>
+				</ObserverRoleMenuSet>
+				<MaintenanceRoleMenuSet>
+					<IdentificationMenu menuId="M_Ident"/>
+					<ParameterMenu menuId="M_Param"/>
+					<DiagnosisMenu menuId="M_Diag"/>
+				</MaintenanceRoleMenuSet>
+				<SpecialistRoleMenuSet>
+					<IdentificationMenu menuId="M_Ident"/>
+					<ParameterMenu menuId="M_Param"/>
+					<DiagnosisMenu menuId="M_Diag"/>
+				</SpecialistRoleMenuSet>
+			</UserInterface>
+		</DeviceFunction>
+	</ProfileBody>
+	<CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.1">
+		<TransportLayers>
+			<PhysicalLayer bitrate="COM2" minCycleTime="2300" sioSupported="false" mSequenceCapability="1">
+				<Connection xsi:type="OtherConnectionT" connectionSymbol="Murrelektronik-IO-Link-con-pic.png">
+					<ProductRef productId="5000-00501-1110000"/> 
+					<Description textId="TD_Wire"/>
+					<Wire1 color="BN" function="L+">
+					<Name textId = "T_IOLWire1"/>
+					</Wire1>
+					<Wire2 color="WH" function="NC">
+					<Name textId = "T_IOLWire2"/>
+					</Wire2>
+					<Wire3 color="BU" function="L-">
+					<Name textId = "T_IOLWire3"/>
+					</Wire3>
+					<Wire4 color="BK" function="C/Q">
+					<Name textId = "T_IOLWire4"/>
+					</Wire4>
+				</Connection>
+				<Connection xsi:type="OtherConnectionT" connectionSymbol="Murrelektronik-IO-Link-con-pic.png">
+					<ProductRef productId="5004-00501-1110000"/> 
+					<Description textId="TD_Wire"/>
+					<Wire1 color="BN" function="L+">
+					<Name textId = "T_IOLWire1"/>
+					</Wire1>
+					<Wire2 color="WH" function="NC">
+					<Name textId = "T_IOLWire2"/>
+					</Wire2>
+					<Wire3 color="BU" function="L-">
+					<Name textId = "T_IOLWire3"/>
+					</Wire3>
+					<Wire4 color="BK" function="C/Q">
+					<Name textId = "T_IOLWire4"/>
+					</Wire4>
+				</Connection>
+			</PhysicalLayer>
+		</TransportLayers>		
+		<Test xsi:type="IOLinkTestT">
+			<Config1 index="160" testValue="0x01,0x02,0x03,0x04"></Config1>
+			<Config2 index="1024" testValue="0x89"></Config2>
+			<Config3 index="24" testValue="0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A,0x2A"></Config3>
+			<Config7 index="1024"> 
+				<EventTrigger appearValue="32" disappearValue="34"/>
+				<EventTrigger appearValue="33" disappearValue="35"/>
+			</Config7>
+		</Test>
+	</CommNetworkProfile>
+	<ExternalTextCollection>	
+		<PrimaryLanguage xml:lang="en">			
+			<Text  value="IOL Analog Conv. straight M12 AI 4..20mA 16Bit IOL V1.12" id="TD_Product_Descr_str"/>
+			<Text  value="IOL Analog Conv. straight M12 AI 4..20mA 16Bit IOL V1.12 VA" id="TD_Product_Descr_va"/>
+			<Text  value="IOL AI-I-STR-4..20mA-UNI" id="TN_Product_Name_str"/>
+			<Text  value="IOL AI-I-STR-4..20mA-UNI VA" id="TN_Product_Name_va"/>
+			<Text  value="Analog Converter" id="TI_DeviceFamily"/>
+			<Text  value="Stay connected" id="TI_VendorText"/>
+			<Text  value="www.murrelektronik.com" id="TI_VendorUrl"/>
+			<Text  value="AI" id="TI_Device"/>
+			<Text  value=" " id="TD_Wire"/>			
+			<Text id="T_IOLWire1" value="US +24V" />
+			<Text id="T_IOLWire2" value="NC" />
+			<Text id="T_IOLWire3" value="US 0V" />
+			<Text id="T_IOLWire4" value="IO-Link" />
+			<Text  value="Diagnose" id="TN_Diagnose"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_0"/>
+			<Text  value="Lower user limit under-run" id="TN_ParamDiagnosisSetup_Bit_1"/>
+			<Text  value="Upper user limit over-run" id="TN_ParamDiagnosisSetup_Bit_2"/>
+			<Text  value="Temperature over-run (T(uC) &gt; 85&#176;C)" id="TN_ParamDiagnosisSetup_Bit_3"/>
+			<Text  value="Primary supply voltage over-run (Ub &gt; 30V)" id="TN_ParamDiagnosisSetup_Bit_4"/>
+			<Text  value="Primary supply voltage under-run (Ub &lt; 18V)" id="TN_ParamDiagnosisSetup_Bit_5"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_6"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_7"/>
+			<Text  value="Device defect" id="TN_ParamDiagnosisSetup_Bit_8"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_9"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_10"/>
+			<Text  value="Sensor supply current over-run" id="TN_ParamDiagnosisSetup_Bit_11"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_12"/>
+			<Text  value="reserviert" id="TN_ParamDiagnosisSetup_Bit_13"/>
+			<Text  value="Nominal range under-run Iin &lt; 4mA" id="TN_ParamDiagnosisSetup_Bit_14"/>
+			<Text  value="Nominal range over-run Iin &gt; 20mA" id="TN_ParamDiagnosisSetup_Bit_15"/>
+			<Text  value="Diagnose Setup" id="TD_ParamDiagnosisSetup"/>
+			<Text  value="Activated" id="TN_DiagnosisSetupBit_ON"/>
+			<Text  value="Deactivated" id="TN_DiagnosisSetupBit_OFF"/>		
+			<Text  value="Invalid factory data - Exchange device." id="TN_Event_6144"/>
+			<Text  value="Invalid parameter data - Exchange device." id="TN_Event_6145"/>
+			<Text  value="Lower threshold of process data value underrun - Value of process data has underrun the configured, lower threshold." id="TN_Event_6146"/>
+			<Text  value="Upper threshold of process data value exceeded - Value of process data has exceeded the configured, upper threshold." id="TN_Event_6147"/>
+			<Text  value="Sensor supply overload - Check installation. Check current consumption of connected load." id="TN_Event_6148"/>
+			<Text  value="Analog input overrun (AIN) / process data overrun (AOUT) - The analog signal (AIN) / process data (AOUT) is/are above the nominal range. Check boundaries of nominal range." id="TN_Event_6149"/>
+			<Text  value="Analog input underrun (AIN) / process data underrun (AOUT) - The analog signal (AIN) / process data (AOUT) is/are below the nominal range. Check boundaries of nominal range." id="TN_Event_6150"/>
+			<Text  value="Override of analog output by external voltage supply - Check installation." id="TN_Event_6153"/>
+			<Text  value="Negative override of analog output by external voltage supply - Check installation." id="TN_Event_6154"/>
+			<Text  value="Analog output failure – Overload at voltage output" id="TN_Event_6155"/>
+			<Text  value="Test event B - Test event to check appearing/disappearing warning." id="TN_Event_6176"/>
+			<Text  value="Test event C - Test event to check appearing/disappearing error." id="TN_Event_6177"/>
+			<Text  value="Diagnose" id="TN_ParamDiagnosisSetup"/>
+			<Text  value="Process data lower limit" id="TN_ParamLowerLimit"/>
+			<Text  value="Process data upper limit" id="TN_ParamUpperLimit"/>
+			<Text  value="Filter time (number of IO-Link cycles)" id="TN_ParamFilterTime"/>
+			<Text  value="Process Data In" id="TN_PI"/>
+			<Text  value="Voltage/Current" id="TN_PI_Value"/>
+			<Text  value="Process data overrun" id="TN_for_overrun_message"/>
+			<Text  value="Process data underrun" id="TN_for_underrun_message"/>
+		</PrimaryLanguage>	
+	</ExternalTextCollection>
+	<Stamp crc="3386463414"><Checker name="IODD-Checker V1.1.4" version="V1.1.4.0"/></Stamp>
+</IODevice>
