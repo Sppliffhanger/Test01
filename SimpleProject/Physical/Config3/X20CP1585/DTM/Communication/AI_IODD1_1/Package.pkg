@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">AI_IODD1_1.dtmdre</Object>
     <Object Type="File">AI_IODD1_1.dtmtre</Object>
+    <Object Type="File">AI_IODD1_1.dtmdri</Object>
   </Objects>
 </Package>
