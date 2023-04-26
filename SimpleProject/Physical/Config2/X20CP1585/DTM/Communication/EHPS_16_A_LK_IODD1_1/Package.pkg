@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">EHPS_16_A_LK_IODD1_1.dtmdre</Object>
     <Object Type="File">EHPS_16_A_LK_IODD1_1.dtmtre</Object>
+    <Object Type="File">EHPS_16_A_LK_IODD1_1.dtmdri</Object>
   </Objects>
 </Package>
