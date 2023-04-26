@@ -5,5 +5,7 @@
     <Object Type="File">Communication.dtm</Object>
     <Object Type="Package">CommDTM</Object>
     <Object Type="Package">X67DS438A</Object>
+    <Object Type="Package">OY1P303P0102_IODD1_0_1</Object>
+    <Object Type="Package">OY1P303P0102_IODD1_1</Object>
   </Objects>
 </Package>

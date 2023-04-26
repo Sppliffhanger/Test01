@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.12.3.127 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="OY1P303P0102_IODD1_0_1" Type="FBD.IOLink.GenericDeviceDTM.DTMCore.OY1P303P0102 IODD1.0.1" Version="1.6" OrderNumber="OY1P303P0102 IODD1.0.1">
+    <Connection Connector="IO-Link1" TargetModule="X67DS438A" TargetConnector="IF1" />
+    <Parameter ID="DtmId" Value="e1a24ed7-5264-44c8-ab99-c1360405a7d5" />
+  </Module>
+  <Module Name="OY1P303P0102_IODD1_1" Type="FBD.IOLink.GenericDeviceDTM.DTMCore.OY1P303P0102 IODD1.1" Version="1.6" OrderNumber="OY1P303P0102 IODD1.1">
+    <Connection Connector="IO-Link1" TargetModule="X67DS438A" TargetConnector="IF2" />
+    <Parameter ID="DtmId" Value="bc85212c-9df4-4565-83f4-1b6b453f99c8" />
+  </Module>
   <Module Name="X20BM11" Type="X20BM11" Version="1.1.0.0">
     <Connection Connector="X2X1" TargetModule="X20CP1585" TargetConnector="IF6" />
   </Module>
@@ -12,6 +20,7 @@
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />
     </Connector>
+    <Parameter ID="ConfigurationID" Value="SimpleProject_Config1" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />

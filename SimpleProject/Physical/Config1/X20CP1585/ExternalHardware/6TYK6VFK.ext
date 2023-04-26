@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IODevice xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD1.1.xsd">
+  <DocumentInfo version="V1.6" releaseDate="2014-08-20" copyright="wenglor sensoric GmbH" />
+  <ProfileHeader>
+    <ProfileIdentification>IO Device Profile</ProfileIdentification>
+    <ProfileRevision>1.1</ProfileRevision>
+    <ProfileName>Device Profile for IO Devices</ProfileName>
+    <ProfileSource>IO-Link Consortium</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>1</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>IODD</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity deviceId="1247490" vendorId="87" vendorName="wenglor sensoric GmbH">
+      <VendorText textId="TN_VendorText" />
+      <VendorUrl textId="TN_VendorUrl" />
+      <VendorLogo name="wenglor-logo.png" />
+      <DeviceName textId="TN_Device" />
+      <DeviceFamily textId="TN_DeviceFamily" />
+      <DeviceVariantCollection>
+        <DeviceVariant productId="OY1P303P0102" deviceSymbol="wenglor-OY1P303P0102-pic.png" deviceIcon="wenglor-OY1P303P0102-icon.png">
+          <Name textId="TN_Product_Name" />
+          <Description textId="TD_Product_Text" />
+        </DeviceVariant>
+      </DeviceVariantCollection>
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Features blockParameter="true" dataStorage="true">
+        <SupportedAccessLocks localUserInterface="true" dataStorage="true" parameter="true" localParameterization="true"></SupportedAccessLocks>
+      </Features>
+      <VariableCollection>
+        <StdVariableRef id="V_DirectParameters_1" />
+        <StdVariableRef id="V_DirectParameters_2" />
+        <StdVariableRef id="V_SystemCommand">
+          <StdSingleValueRef value="130"></StdSingleValueRef>
+          <SingleValue value="240">
+            <Name textId="TN_SystemCommand240" />
+          </SingleValue>
+          <SingleValue value="241">
+            <Name textId="TN_SystemCommand241" />
+          </SingleValue>
+          <SingleValue value="242">
+            <Name textId="TN_SystemCommand242" />
+          </SingleValue>
+          <SingleValue value="243">
+            <Name textId="TN_SystemCommand243" />
+          </SingleValue>
+        </StdVariableRef>
+        <StdVariableRef id="V_DeviceAccessLocks">
+          <StdRecordItemRef subindex="1" defaultValue="0" />
+          <StdRecordItemRef subindex="2" defaultValue="0" />
+          <StdRecordItemRef subindex="3" defaultValue="0" />
+          <StdRecordItemRef subindex="4" defaultValue="0" />
+        </StdVariableRef>
+        <StdVariableRef id="V_VendorName" fixedLengthRestriction="32" defaultValue="wenglor sensoric GmbH"></StdVariableRef>
+        <StdVariableRef id="V_VendorText" fixedLengthRestriction="32" defaultValue="the innovative family"></StdVariableRef>
+        <StdVariableRef id="V_ProductName" fixedLengthRestriction="32" defaultValue="OY1P303P0102"></StdVariableRef>
+        <StdVariableRef id="V_ProductID" fixedLengthRestriction="32" defaultValue="OY1P303P0102"></StdVariableRef>
+        <StdVariableRef id="V_ProductText" fixedLengthRestriction="64" defaultValue="High-Performance Distance Sensor"></StdVariableRef>
+        <StdVariableRef id="V_SerialNumber" fixedLengthRestriction="9" />
+        <StdVariableRef id="V_HardwareRevision" fixedLengthRestriction="32" />
+        <StdVariableRef id="V_FirmwareRevision" fixedLengthRestriction="32" />
+        <StdVariableRef id="V_ApplicationSpecificTag" fixedLengthRestriction="32" defaultValue="***" />
+        <Variable index="64" accessRights="rw" id="V_EA1" defaultValue="0" dynamic="true">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Switch" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Error" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Contamination" />
+            </SingleValue>
+            <SingleValue value="3">
+              <Name textId="TI_Laser_Input" />
+            </SingleValue>
+            <SingleValue value="4">
+              <Name textId="TI_Extern_Teach_A2" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Index_EA1" />
+        </Variable>
+        <Variable index="65" accessRights="rw" id="V_EA2" defaultValue="3" dynamic="true">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Switch" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Error" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Contamination" />
+            </SingleValue>
+            <SingleValue value="3">
+              <Name textId="TI_Analog" />
+            </SingleValue>
+            <SingleValue value="4">
+              <Name textId="TI_Laser_Input" />
+            </SingleValue>
+            <SingleValue value="5">
+              <Name textId="TI_Extern_Teach_A1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Index_EA2" />
+        </Variable>
+        <Variable index="80" accessRights="rw" id="V_On_Delay_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="10000" />
+            <SingleValue value="0" />
+          </Datatype>
+          <Name textId="TI_Index_On_Delay_A1" />
+        </Variable>
+        <Variable index="81" accessRights="rw" id="V_On_Delay_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="10000" />
+            <SingleValue value="0" />
+          </Datatype>
+          <Name textId="TI_Index_On_Delay_A2" />
+        </Variable>
+        <Variable index="96" accessRights="rw" id="V_Off_Delay_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="10000" />
+            <SingleValue value="0" />
+          </Datatype>
+          <Name textId="TI_Index_Off_Delay_A1" />
+        </Variable>
+        <Variable index="97" accessRights="rw" id="V_Off_Delay_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="10000" />
+            <SingleValue value="0" />
+          </Datatype>
+          <Name textId="TI_Index_Off_Delay_A2" />
+        </Variable>
+        <Variable index="112" accessRights="rw" id="V_Impuls_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="10000" />
+            <SingleValue value="0" />
+          </Datatype>
+          <Name textId="TI_Index_Impuls_A1" />
+        </Variable>
+        <Variable index="113" accessRights="rw" id="V_Impuls_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="10000" />
+            <SingleValue value="0" />
+          </Datatype>
+          <Name textId="TI_Index_Impuls_A2" />
+        </Variable>
+        <Variable index="128" accessRights="wo" id="V_Analogteach" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_ANA_Teach_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_ANA_Teach_1" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_ANA_Teach_2" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Analogteach" />
+        </Variable>
+        <Variable index="129" accessRights="rw" id="V_Analog_Low" dynamic="true" defaultValue="50">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="50" upperValue="3050" />
+          </Datatype>
+          <Name textId="TI_Index_Analog_Low" />
+        </Variable>
+        <Variable index="130" accessRights="rw" id="V_Analog_High" dynamic="true" defaultValue="3050">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="50" upperValue="3050" />
+          </Datatype>
+          <Name textId="TI_Index_Analog_High" />
+        </Variable>
+        <Variable index="131" accessRights="rw" id="V_Analogmodus" dynamic="true" defaultValue="1">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_ANA_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_ANA_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Analogmodus" />
+        </Variable>
+        <Variable index="160" accessRights="rw" id="V_Display_Rotate" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Display_Rotate_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Display_Rotate_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Display_Rotate" />
+        </Variable>
+        <Variable index="161" accessRights="rw" id="V_Display_Intensity" dynamic="true" defaultValue="4">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Display_Intensity_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Display_Intensity_1" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Display_Intensity_2" />
+            </SingleValue>
+            <SingleValue value="3">
+              <Name textId="TI_Display_Intensity_3" />
+            </SingleValue>
+            <SingleValue value="4">
+              <Name textId="TI_Display_Intensity_4" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Display_Intensity" />
+        </Variable>
+        <Variable index="162" accessRights="rw" id="V_Display_Modus" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Display_Modus_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Display_Modus_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Display_Modus" />
+        </Variable>
+        <Variable index="176" accessRights="rw" id="V_Expertmenu" dynamic="true" defaultValue="1">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Expertmenu_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Expertmenu_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Expertmenu" />
+        </Variable>
+        <Variable index="208" accessRights="rw" id="V_Filter" dynamic="true" defaultValue="2">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_Filter_1" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_Filter_2" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_Filter_5" />
+            </SingleValue>
+            <SingleValue value="3">
+              <Name textId="TI_Parameter_Filter_10" />
+            </SingleValue>
+            <SingleValue value="4">
+              <Name textId="TI_Parameter_Filter_20" />
+            </SingleValue>
+            <SingleValue value="5">
+              <Name textId="TI_Parameter_Filter_50" />
+            </SingleValue>
+            <SingleValue value="6">
+              <Name textId="TI_Parameter_Filter_100" />
+            </SingleValue>
+            <SingleValue value="7">
+              <Name textId="TI_Parameter_Filter_200" />
+            </SingleValue>
+            <SingleValue value="8">
+              <Name textId="TI_Parameter_Filter_500" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Index_Filter" />
+        </Variable>
+        <Variable index="224" accessRights="rw" id="V_Laser" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Laser_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Laser_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Laser" />
+        </Variable>
+        <Variable index="240" accessRights="rw" id="V_Language" dynamic="true" defaultValue="1">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_Language_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_Language_1" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_Language_2" />
+            </SingleValue>
+            <SingleValue value="3">
+              <Name textId="TI_Parameter_Language_3" />
+            </SingleValue>
+            <SingleValue value="4">
+              <Name textId="TI_Parameter_Language_4" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Language" />
+        </Variable>
+        <Variable index="256" accessRights="rw" id="V_Password_Enable" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Password_Enable_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Password_Enable_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Password_Enable" />
+        </Variable>
+        <Variable index="257" accessRights="rw" id="V_Password_Change" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="0" upperValue="9999" />
+          </Datatype>
+          <Name textId="TI_Password_Change" />
+        </Variable>
+        <Variable index="512" accessRights="wo" id="V_Teach_A1" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_No_Teach" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Do_Teach" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Teach_A1" />
+        </Variable>
+        <Variable index="513" accessRights="wo" id="V_Teach_A2" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_No_Teach" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Do_Teach" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Teach_A2" />
+        </Variable>
+        <Variable index="528" accessRights="rw" id="V_NONC_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_NO_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_NO_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_NONC_A1" />
+        </Variable>
+        <Variable index="529" accessRights="rw" id="V_NONC_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_NO_0" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_NO_1" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_NONC_A2" />
+        </Variable>
+        <Variable index="544" accessRights="rw" id="V_NPN_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_PNP" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_NPN" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_PP" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_NPN_A1" />
+        </Variable>
+        <Variable index="545" accessRights="rw" id="V_NPN_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_PNP" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_NPN" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_PP" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_NPN_A2" />
+        </Variable>
+        <Variable index="560" accessRights="rw" id="V_Hysteresis_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="0" upperValue="1000" />
+          </Datatype>
+          <Name textId="TI_Hysteresis_A1" />
+        </Variable>
+        <Variable index="561" accessRights="rw" id="V_Hysteresis_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="0" upperValue="1000" />
+          </Datatype>
+          <Name textId="TI_Hysteresis_A2" />
+        </Variable>
+        <Variable index="576" accessRights="rw" id="V_Teach_Point_A1" dynamic="true" defaultValue="1000">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="50" upperValue="3050" />
+          </Datatype>
+          <Name textId="TI_Teach_Point_A1" />
+        </Variable>
+        <Variable index="577" accessRights="rw" id="V_Teach_Point_A2" dynamic="true" defaultValue="1000">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="50" upperValue="3050" />
+          </Datatype>
+          <Name textId="TI_Teach_Point_A2" />
+        </Variable>
+        <Variable index="592" accessRights="rw" id="V_Window_Size_A1" dynamic="true" defaultValue="50">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="1000" />
+          </Datatype>
+          <Name textId="TI_Window_Size_A1" />
+        </Variable>
+        <Variable index="593" accessRights="rw" id="V_Window_Size_A2" dynamic="true" defaultValue="50">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="10" upperValue="1000" />
+          </Datatype>
+          <Name textId="TI_Window_Size_A2" />
+        </Variable>
+        <Variable index="608" accessRights="rw" id="V_Input_Polarity" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Ub_Active" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_0V_Active" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Input_Polarity" />
+        </Variable>
+        <Variable index="609" accessRights="rw" id="V_Extern_Teach" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_Teach_VG" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_Teach_BG" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_Teach_Window" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Extern_Teach" />
+        </Variable>
+        <Variable index="624" accessRights="ro" id="V_Switch_Point_A1_1_Low" dynamic="true" defaultValue="1016">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A1_1_Low" />
+        </Variable>
+        <Variable index="625" accessRights="ro" id="V_Switch_Point_A1_1_High" dynamic="true" defaultValue="1028">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A1_1_High" />
+        </Variable>
+        <Variable index="626" accessRights="ro" id="V_Switch_Point_A1_2_Low" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A1_2_Low" />
+        </Variable>
+        <Variable index="627" accessRights="ro" id="V_Switch_Point_A1_2_High" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A1_2_High" />
+        </Variable>
+        <Variable index="640" accessRights="ro" id="V_Switch_Point_A2_1_Low" dynamic="true" defaultValue="1016">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A2_1_Low" />
+        </Variable>
+        <Variable index="641" accessRights="ro" id="V_Switch_Point_A2_1_High" dynamic="true" defaultValue="1028">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A2_1_High" />
+        </Variable>
+        <Variable index="642" accessRights="ro" id="V_Switch_Point_A2_2_Low" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A2_2_Low" />
+        </Variable>
+        <Variable index="643" accessRights="ro" id="V_Switch_Point_A2_2_High" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Switch_Point_A2_2_High" />
+        </Variable>
+        <Variable index="656" accessRights="rw" id="V_Teach_Mode_A1" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_Teach_VG" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_Teach_BG" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_Teach_Window" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Teach_Mode_A1" />
+        </Variable>
+        <Variable index="657" accessRights="rw" id="V_Teach_Mode_A2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_Parameter_Teach_VG" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_Parameter_Teach_BG" />
+            </SingleValue>
+            <SingleValue value="2">
+              <Name textId="TI_Parameter_Teach_Window" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_Teach_Mode_A2" />
+        </Variable>
+        <Variable index="768" accessRights="ro" id="V_Hysteresis_Total_A1" dynamic="true" defaultValue="12">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Hysteresis_Total_A1" />
+        </Variable>
+        <Variable index="769" accessRights="ro" id="V_Hysteresis_Total_A2" dynamic="true" defaultValue="12">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Hysteresis_Total_A2" />
+        </Variable>
+        <Variable index="776" accessRights="ro" id="V_Hysteresis_Intern" dynamic="true" defaultValue="12">
+          <Datatype xsi:type="UIntegerT" bitLength="16" />
+          <Name textId="TI_Hysteresis_Intern" />
+        </Variable>
+        <Variable index="784" accessRights="rw" id="V_TestMode" excludedFromDataStorage="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_TestMode_Off" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_TestMode_On" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_TestMode" />
+        </Variable>
+        <Variable index="785" accessRights="rw" id="V_TestA2" excludedFromDataStorage="true" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_OFF" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_ON" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_TestA2" />
+        </Variable>
+        <Variable index="786" accessRights="rw" id="V_TestAnalog" excludedFromDataStorage="true" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="16">
+            <ValueRange lowerValue="0" upperValue="20000" />
+          </Datatype>
+          <Name textId="TI_TestAnalog" />
+        </Variable>
+        <Variable index="787" accessRights="ro" id="V_TestE2" dynamic="true" defaultValue="0">
+          <Datatype xsi:type="UIntegerT" bitLength="8">
+            <SingleValue value="0">
+              <Name textId="TI_OFF" />
+            </SingleValue>
+            <SingleValue value="1">
+              <Name textId="TI_ON" />
+            </SingleValue>
+          </Datatype>
+          <Name textId="TI_TestE2" />
+        </Variable>
+      </VariableCollection>
+      <ProcessDataCollection>
+        <ProcessData id="P_Process">
+          <ProcessDataIn id="PI_ProcessIn" bitLength="16">
+            <Datatype xsi:type="RecordT" bitLength="16">
+              <RecordItem subindex="1" bitOffset="0">
+                <SimpleDatatype xsi:type="BooleanT">
+                  <SingleValue value="false">
+                    <Name textId="TN_DigitalIn_1_false" />
+                  </SingleValue>
+                  <SingleValue value="true">
+                    <Name textId="TN_DigitalIn_1_true" />
+                  </SingleValue>
+                </SimpleDatatype>
+                <Name textId="TN_DigitalIn_1" />
+              </RecordItem>
+              <RecordItem subindex="2" bitOffset="1">
+                <SimpleDatatype xsi:type="BooleanT">
+                  <SingleValue value="false">
+                    <Name textId="TN_DigitalIn_2_false" />
+                  </SingleValue>
+                  <SingleValue value="true">
+                    <Name textId="TN_DigitalIn_2_true" />
+                  </SingleValue>
+                </SimpleDatatype>
+                <Name textId="TN_DigitalIn_2" />
+              </RecordItem>
+              <RecordItem subindex="3" bitOffset="2">
+                <SimpleDatatype xsi:type="BooleanT">
+                  <SingleValue value="false">
+                    <Name textId="TN_DigitalIn_3_false" />
+                  </SingleValue>
+                  <SingleValue value="true">
+                    <Name textId="TN_DigitalIn_3_true" />
+                  </SingleValue>
+                </SimpleDatatype>
+                <Name textId="TN_DigitalIn_3" />
+              </RecordItem>
+              <RecordItem subindex="4" bitOffset="3">
+                <SimpleDatatype xsi:type="BooleanT">
+                  <SingleValue value="false">
+                    <Name textId="TN_DigitalIn_4_false" />
+                  </SingleValue>
+                  <SingleValue value="true">
+                    <Name textId="TN_DigitalIn_4_true" />
+                  </SingleValue>
+                </SimpleDatatype>
+                <Name textId="TN_DigitalIn_4" />
+              </RecordItem>
+              <RecordItem subindex="5" bitOffset="4">
+                <SimpleDatatype xsi:type="UIntegerT" bitLength="12">
+                  <ValueRange lowerValue="0" upperValue="3050" />
+                </SimpleDatatype>
+                <Name textId="TN_DigitalIn_5" />
+              </RecordItem>
+            </Datatype>
+            <Name textId="TN_ProcessIn" />
+          </ProcessDataIn>
+        </ProcessData>
+      </ProcessDataCollection>
+      <ErrorTypeCollection>
+        <StdErrorTypeRef additionalCode="0"></StdErrorTypeRef>
+        <!--Device application error – no details-->
+        <!--Index not available-->
+        <StdErrorTypeRef additionalCode="17"></StdErrorTypeRef>
+        <!--Subindex not available-->
+        <StdErrorTypeRef additionalCode="18"></StdErrorTypeRef>
+        <!--Service temporarily not available-->
+        <StdErrorTypeRef additionalCode="32"></StdErrorTypeRef>
+        <!--Service temporarily not available - local control-->
+        <StdErrorTypeRef additionalCode="33"></StdErrorTypeRef>
+        <!--Service temporarily not available – Device control-->
+        <StdErrorTypeRef additionalCode="34"></StdErrorTypeRef>
+        <!--Access denied-->
+        <StdErrorTypeRef additionalCode="35"></StdErrorTypeRef>
+        <!--Parameter value out of range-->
+        <StdErrorTypeRef additionalCode="48"></StdErrorTypeRef>
+        <!--Parameter value above limit-->
+        <StdErrorTypeRef additionalCode="49"></StdErrorTypeRef>
+        <!--Parameter value below limit-->
+        <StdErrorTypeRef additionalCode="50"></StdErrorTypeRef>
+        <!--Parameter length overrun-->
+        <StdErrorTypeRef additionalCode="51"></StdErrorTypeRef>
+        <!--Parameter length underrun-->
+        <StdErrorTypeRef additionalCode="52"></StdErrorTypeRef>
+        <!--Function not available-->
+        <StdErrorTypeRef additionalCode="53"></StdErrorTypeRef>
+        <!--Function temporarily unavailable-->
+        <StdErrorTypeRef additionalCode="54"></StdErrorTypeRef>
+        <!--Invalid parameter set-->
+        <StdErrorTypeRef additionalCode="64"></StdErrorTypeRef>
+        <!--Inconsistent parameter set-->
+        <StdErrorTypeRef additionalCode="65"></StdErrorTypeRef>
+        <!--Application not ready-->
+        <StdErrorTypeRef additionalCode="130"></StdErrorTypeRef>
+      </ErrorTypeCollection>
+      <EventCollection>
+        <Event code="36350" type="Warning">
+          <Name textId="TN_Event_8DFE" />
+          <Description textId="TD_Event_8DFE" />
+        </Event>
+        <Event code="36351" type="Warning">
+          <Name textId="TN_Event_8DFF" />
+          <Description textId="TD_Event_8DFF" />
+        </Event>
+      </EventCollection>
+      <UserInterface>
+        <ProcessDataRefCollection>
+          <ProcessDataRef processDataId="PI_ProcessIn">
+            <ProcessDataRecordItemInfo subindex="1"></ProcessDataRecordItemInfo>
+            <ProcessDataRecordItemInfo subindex="2"></ProcessDataRecordItemInfo>
+            <ProcessDataRecordItemInfo subindex="3"></ProcessDataRecordItemInfo>
+            <ProcessDataRecordItemInfo subindex="4"></ProcessDataRecordItemInfo>
+            <ProcessDataRecordItemInfo subindex="5" unitCode="1013"></ProcessDataRecordItemInfo>
+          </ProcessDataRef>
+        </ProcessDataRefCollection>
+        <MenuCollection>
+          <Menu id="ME_Ident">
+            <VariableRef variableId="V_VendorName" />
+            <VariableRef variableId="V_VendorText" />
+            <VariableRef variableId="V_ProductName" />
+            <VariableRef variableId="V_ProductID" />
+            <VariableRef variableId="V_ProductText" />
+            <VariableRef variableId="V_SerialNumber" />
+            <VariableRef variableId="V_HardwareRevision" />
+            <VariableRef variableId="V_FirmwareRevision" />
+            <VariableRef variableId="V_ApplicationSpecificTag" />
+          </Menu>
+          <Menu id="ME_Parameter">
+            <MenuRef menuId="ME_Device_Settings" />
+            <MenuRef menuId="ME_Measured_Value_Settings" />
+            <MenuRef menuId="ME_I_O_A1" />
+            <MenuRef menuId="ME_I_O_A2" />
+            <MenuRef menuId="ME_Test" />
+          </Menu>
+          <Menu id="ME_Device_Settings">
+            <Name textId="TN_Device_Settings" />
+            <!--general device settings-->
+            <VariableRef accessRightRestriction="wo" variableId="V_SystemCommand">
+              <Button buttonValue="130" />
+            </VariableRef>
+            <VariableRef variableId="V_DeviceAccessLocks" />
+            <VariableRef variableId="V_Display_Rotate" />
+            <VariableRef variableId="V_Display_Intensity" />
+            <VariableRef variableId="V_Display_Modus" />
+            <VariableRef variableId="V_Expertmenu" />
+            <VariableRef variableId="V_Language" />
+            <VariableRef variableId="V_Password_Enable" />
+            <VariableRef variableId="V_Password_Change" />
+          </Menu>
+          <Menu id="ME_Measured_Value_Settings">
+            <Name textId="TN_Measured_Settings" />
+            <!--measured value settings-->
+            <VariableRef variableId="V_Filter" />
+            <VariableRef variableId="V_Laser" />
+          </Menu>
+          <Menu id="ME_I_O_A1">
+            <!--Parameter for Input/Output A1-->
+            <Name textId="TN_I_O_A1" />
+            <VariableRef variableId="V_EA1" />
+            <VariableRef accessRightRestriction="wo" variableId="V_Teach_A1">
+              <Button buttonValue="1" />
+            </VariableRef>
+            <VariableRef variableId="V_Teach_Mode_A1" />
+            <VariableRef variableId="V_Teach_Point_A1" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A1_1_Low" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A1_1_High" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A1_2_Low" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A1_2_High" unitCode="1013" />
+            <VariableRef variableId="V_Hysteresis_Intern" unitCode="1013" />
+            <VariableRef variableId="V_Hysteresis_A1" unitCode="1013" />
+            <VariableRef variableId="V_Hysteresis_Total_A1" unitCode="1013" />
+            <VariableRef variableId="V_Window_Size_A1" unitCode="1013" />
+            <VariableRef variableId="V_On_Delay_A1" unitCode="1056" />
+            <VariableRef variableId="V_Off_Delay_A1" unitCode="1056" />
+            <VariableRef variableId="V_Impuls_A1" unitCode="1056" />
+            <VariableRef variableId="V_NPN_A1" />
+            <VariableRef variableId="V_NONC_A1" />
+            <VariableRef variableId="V_Input_Polarity" />
+            <VariableRef variableId="V_Extern_Teach" />
+          </Menu>
+          <Menu id="ME_I_O_A2">
+            <!--Parameter for Input/Output A2-->
+            <Name textId="TN_I_O_A2" />
+            <VariableRef variableId="V_EA2" />
+            <VariableRef accessRightRestriction="wo" variableId="V_Teach_A2">
+              <Button buttonValue="1" />
+            </VariableRef>
+            <VariableRef variableId="V_Teach_Mode_A2" />
+            <VariableRef variableId="V_Teach_Point_A2" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A2_1_Low" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A2_1_High" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A2_2_Low" unitCode="1013" />
+            <VariableRef variableId="V_Switch_Point_A2_2_High" unitCode="1013" />
+            <VariableRef variableId="V_Hysteresis_Intern" unitCode="1013" />
+            <VariableRef variableId="V_Hysteresis_A2" unitCode="1013" />
+            <VariableRef variableId="V_Hysteresis_Total_A2" unitCode="1013" />
+            <VariableRef variableId="V_Window_Size_A2" unitCode="1013" />
+            <VariableRef variableId="V_On_Delay_A2" unitCode="1056" />
+            <VariableRef variableId="V_Off_Delay_A2" unitCode="1056" />
+            <VariableRef variableId="V_Impuls_A2" unitCode="1056" />
+            <VariableRef variableId="V_NPN_A2" />
+            <VariableRef variableId="V_NONC_A2" />
+            <VariableRef variableId="V_Analogmodus" />
+            <VariableRef variableId="V_Analogteach" accessRightRestriction="wo">
+              <Button buttonValue="1" />
+            </VariableRef>
+            <VariableRef variableId="V_Analogteach" accessRightRestriction="wo">
+              <Button buttonValue="2" />
+            </VariableRef>
+            <VariableRef variableId="V_Analog_Low" unitCode="1013" />
+            <VariableRef variableId="V_Analog_High" unitCode="1013" />
+            <VariableRef variableId="V_Input_Polarity" />
+            <VariableRef variableId="V_Extern_Teach" />
+          </Menu>
+          <Menu id="ME_Test">
+            <!--Parameter Test Mode-->
+            <Name textId="TN_TestModeSite" />
+            <VariableRef variableId="V_TestMode" />
+            <VariableRef variableId="V_TestA2" />
+            <VariableRef variableId="V_TestAnalog" displayFormat="Dec" />
+            <VariableRef variableId="V_TestE2" />
+          </Menu>
+        </MenuCollection>
+        <ObserverRoleMenuSet>
+          <IdentificationMenu menuId="ME_Ident" />
+        </ObserverRoleMenuSet>
+        <MaintenanceRoleMenuSet>
+          <IdentificationMenu menuId="ME_Ident" />
+        </MaintenanceRoleMenuSet>
+        <SpecialistRoleMenuSet>
+          <IdentificationMenu menuId="ME_Ident" />
+          <ParameterMenu menuId="ME_Parameter" />
+          <!--<DiagnosisMenu menuId="M_MR_SR_Diag"/>-->
+        </SpecialistRoleMenuSet>
+      </UserInterface>
+    </DeviceFunction>
+  </ProfileBody>
+  <CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.1">
+    <TransportLayers>
+      <PhysicalLayer minCycleTime="2300" sioSupported="true" bitrate="COM2" mSequenceCapability="1">
+        <Connection connectionSymbol="wenglor-OY1P303P0102-con-pic.png" xsi:type="M12-4ConnectionT">
+          <ProductRef productId="OY1P303P0102" />
+          <Wire1 />
+          <Wire2 color="WH" function="Other" />
+          <Wire3></Wire3>
+          <Wire4 />
+        </Connection>
+      </PhysicalLayer>
+    </TransportLayers>
+    <Test>
+      <Config1 index="80" testValue="0x01,0xFF" />
+      <Config2 index="528" testValue="0x01" />
+      <Config3 index="24" testValue="0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x41,0x42,0x43,0x44,0x45,0x46" />
+      <Config7 index="2">
+        <EventTrigger appearValue="240" disappearValue="241" />
+      </Config7>
+    </Test>
+  </CommNetworkProfile>
+  <ExternalTextCollection>
+    <PrimaryLanguage xml:lang="en">
+      <!-- ********************************************************** -->
+      <!--Text for sensor information-->
+      <!-- ********************************************************** -->
+      <Text id="TN_Device" value="OY1P303P0102" />
+      <Text id="TN_VendorText" value="the innovative family" />
+      <Text id="TN_VendorUrl" value="http://www.wenglor.com" />
+      <Text id="TN_DeviceFamily" value="High-Performance Distance Sensor" />
+      <Text id="TN_Product_Name" value="OY1P303P0102" />
+      <Text id="TD_Product_Text" value="High-Performance Distance Sensor" />
+      <!-- ********************************************************** -->
+      <!--Text for menu names-->
+      <!-- ********************************************************** -->
+      <Text id="TN_Device_Settings" value="Device Settings" />
+      <Text id="TN_Measured_Settings" value="Measured Value Settings" />
+      <Text id="TN_I_O_A1" value="E/A1 Input/Output " />
+      <Text id="TN_I_O_A2" value="E/A2 Input/Output " />
+      <Text id="TN_TestModeSite" value="Device Test" />
+      <!-- ********************************************************** -->
+      <!--Text for process data-->
+      <!-- ********************************************************** -->
+      <Text id="TN_ProcessIn" value="Process data in" />
+      <Text id="TN_DigitalIn_1" value="A1 Output " />
+      <Text id="TN_DigitalIn_2" value="A2 Output" />
+      <Text id="TN_DigitalIn_3" value="Contamination Output" />
+      <Text id="TN_DigitalIn_4" value="Error Output" />
+      <Text id="TN_DigitalIn_5" value="Measured Value" />
+      <Text id="TN_DigitalIn_1_false" value="false"></Text>
+      <Text id="TN_DigitalIn_1_true" value="true" />
+      <Text id="TN_DigitalIn_2_false" value="false"></Text>
+      <Text id="TN_DigitalIn_2_true" value="true" />
+      <Text id="TN_DigitalIn_3_false" value="false"></Text>
+      <Text id="TN_DigitalIn_3_true" value="true"></Text>
+      <Text id="TN_DigitalIn_4_false" value="false"></Text>
+      <Text id="TN_DigitalIn_4_true" value="true"></Text>
+      <!-- ********************************************************** -->
+      <!--Text for events-->
+      <!-- ********************************************************** -->
+      <Text id="TN_Event_8DFE" value="Simulation Event 1"></Text>
+      <Text id="TN_Event_8DFF" value="Simulation Event 2"></Text>
+      <Text id="TD_Event_8DFE" value="Appear: SystemCommand 0xF0, Disappear: SystemCommand 0xF1"></Text>
+      <Text id="TD_Event_8DFF" value="Appear: SystemCommand 0xF2, Disappear: SystemCommand 0xF3"></Text>
+      <!-- ********************************************************** -->
+      <!--Text for variable name-->
+      <!-- ********************************************************** -->
+      <Text id="TI_Index_EA1" value="E/A1 Pin Function " />
+      <Text id="TI_Index_EA2" value="E/A2 Pin Function" />
+      <Text id="TI_Index_Filter" value="Filter" />
+      <Text id="TI_Language" value="Language" />
+      <Text id="TI_Analogmodus" value="A2 Analog Mode U/I" />
+      <Text id="TI_Analogteach" value="A2 Analog Teach-In" />
+      <Text id="TI_Teach_A1" value="A1 Teach-In" />
+      <Text id="TI_Teach_A2" value="A2 Teach-In" />
+      <Text id="TI_NONC_A1" value="A1 NO/NC" />
+      <Text id="TI_NONC_A2" value="A2 NO/NC " />
+      <Text id="TI_NPN_A1" value="A1 NPN/PNP" />
+      <Text id="TI_NPN_A2" value="A2 NPN/PNP " />
+      <Text id="TI_Laser" value="Emitted Light " />
+      <Text id="TI_Password_Enable" value="Password Enable" />
+      <Text id="TI_Expertmenu" value="Expert Menu" />
+      <Text id="TI_Display_Rotate" value="Display Rotate" />
+      <Text id="TI_Display_Modus" value="Display Mode" />
+      <Text id="TI_Display_Intensity" value="Display Intensity" />
+      <Text id="TI_Password_Change" value="Password Change" />
+      <Text id="TI_Index_Impuls_A1" value="A1 Impulse " />
+      <Text id="TI_Index_On_Delay_A1" value="A1 ON Delay" />
+      <Text id="TI_Index_Impuls_A2" value="A2 Impulse " />
+      <Text id="TI_Hysteresis_A1" value="A1 Hysteresis Additional" />
+      <Text id="TI_Hysteresis_A2" value="A2 Hysteresis Additional" />
+      <Text id="TI_Teach_Point_A1" value="A1 Teach Distance" />
+      <Text id="TI_Teach_Point_A2" value="A2 Teach Distance" />
+      <Text id="TI_Window_Size_A1" value="A1 Window Size " />
+      <Text id="TI_Window_Size_A2" value="A2 Window Size" />
+      <Text id="TI_Input_Polarity" value="Input Ub active/inactive" />
+      <Text id="TI_Switch_Point_A1_1_Low" value="A1 Switch Point (1 Low)" />
+      <Text id="TI_Switch_Point_A1_1_High" value="A1 Switch Point (1 High)" />
+      <Text id="TI_Switch_Point_A1_2_Low" value="A1 Switch Point (2 Low)" />
+      <Text id="TI_Switch_Point_A1_2_High" value="A1 Switch Point (2 High)" />
+      <Text id="TI_Switch_Point_A2_1_Low" value="A2 Switch Point (1 Low)" />
+      <Text id="TI_Switch_Point_A2_1_High" value="A2 Switch Point (1 High)" />
+      <Text id="TI_Switch_Point_A2_2_Low" value="A2 Switch Point (2 Low)" />
+      <Text id="TI_Switch_Point_A2_2_High" value="A2 Switch Point (2 High)" />
+      <Text id="TI_Extern_Teach" value="Extern Teach" />
+      <Text id="TI_Teach_Mode_A1" value="A1 Teach Mode " />
+      <Text id="TI_Teach_Mode_A2" value="A2 Teach Mode " />
+      <Text id="TI_Hysteresis_Total_A1" value="A1 Hysteresis" />
+      <Text id="TI_Hysteresis_Total_A2" value="A2 Hysteresis" />
+      <Text id="TI_Hysteresis_Intern" value="Hysteresis min" />
+      <Text id="TI_TestA2" value="Test A2" />
+      <Text id="TI_TestMode" value="Test Mode" />
+      <Text id="TI_TestAnalog" value="Test Analog" />
+      <Text id="TI_TestE2" value="Test E2" />
+      <Text id="TI_Index_Off_Delay_A1" value="A1 OFF Delay" />
+      <Text id="TI_Index_Off_Delay_A2" value="A2 OFF Delay" />
+      <Text id="TI_Index_On_Delay_A2" value="A2 ON Delay" />
+      <!-- ********************************************************** -->
+      <!--Text for variable values-->
+      <!-- ********************************************************** -->
+      <Text id="TI_Do_Teach" value="Teach-In" />
+      <Text id="TI_Parameter_Filter_1" value="1" />
+      <Text id="TI_Parameter_Filter_2" value="2" />
+      <Text id="TI_Parameter_Filter_5" value="5" />
+      <Text id="TI_Parameter_Filter_10" value="10" />
+      <Text id="TI_Parameter_Filter_20" value="20" />
+      <Text id="TI_Parameter_Filter_50" value="50" />
+      <Text id="TI_Parameter_Filter_100" value="100" />
+      <Text id="TI_Parameter_Filter_200" value="200" />
+      <Text id="TI_Parameter_Filter_500" value="500" />
+      <Text id="TI_Parameter_Language_0" value="Deutsch" />
+      <Text id="TI_Parameter_Language_1" value="English" />
+      <Text id="TI_Parameter_Language_2" value="Francais" />
+      <Text id="TI_Parameter_Language_3" value="Espanol" />
+      <Text id="TI_Parameter_Language_4" value="Italiano" />
+      <Text id="TI_Parameter_Teach_VG" value="Foreground" />
+      <Text id="TI_Parameter_Teach_BG" value="Background" />
+      <Text id="TI_Parameter_Teach_Window" value="Window" />
+      <Text id="TI_Parameter_PNP" value="PNP" />
+      <Text id="TI_Parameter_NPN" value="NPN" />
+      <Text id="TI_Parameter_PP" value="Pushpull" />
+      <Text id="TI_ANA_0" value="Voltage Output" />
+      <Text id="TI_ANA_1" value="Current Output" />
+      <Text id="TI_ANA_Teach_0" value="-" />
+      <Text id="TI_ANA_Teach_1" value="0V / 4mA" />
+      <Text id="TI_ANA_Teach_2" value="10V / 20mA" />
+      <Text id="TI_Switch" value="Switching Output" />
+      <Text id="TI_Error" value="Error Output" />
+      <Text id="TI_Analog" value="Analog Output" />
+      <Text id="TI_Contamination" value="Contamination Output" />
+      <Text id="TI_Laser_Input" value="Emitted Light Disengageable" />
+      <Text id="TI_NO_0" value="NO" />
+      <Text id="TI_NO_1" value="NC" />
+      <Text id="TI_Index_Analog_Low" value="A2 Analog Low" />
+      <Text id="TI_Index_Analog_High" value="A2 Analog High" />
+      <Text id="TI_Password_Enable_0" value="OFF" />
+      <Text id="TI_Password_Enable_1" value="ON" />
+      <Text id="TI_Expertmenu_0" value="ON" />
+      <Text id="TI_Expertmenu_1" value="OFF" />
+      <Text id="TI_Display_Rotate_0" value="Normal" />
+      <Text id="TI_Display_Rotate_1" value="Rotate" />
+      <Text id="TI_Display_Modus_1" value="Analog" />
+      <Text id="TI_Display_Modus_0" value="Switch" />
+      <Text id="TI_Display_Intensity_0" value="Min" />
+      <Text id="TI_Display_Intensity_1" value="Normal" />
+      <Text id="TI_Display_Intensity_2" value="Max" />
+      <Text id="TI_Display_Intensity_3" value="Power save" />
+      <Text id="TI_Display_Intensity_4" value="Screensaver" />
+      <Text id="TI_Laser_0" value="ON" />
+      <Text id="TI_Laser_1" value="OFF" />
+      <Text id="TI_Ub_Active" value="Ub active" />
+      <Text id="TI_0V_Active" value="Ub inactive" />
+      <Text id="TI_Parameter_No_Teach" value="-" />
+      <Text id="TI_Extern_Teach_A2" value="Extern Teach A2" />
+      <Text id="TI_Extern_Teach_A1" value="Extern Teach A1" />
+      <Text id="TI_OFF" value="OFF" />
+      <Text id="TI_ON" value="ON" />
+      <Text id="TI_TestMode_Off" value="OFF" />
+      <Text id="TI_TestMode_On" value="ON"></Text>
+      <Text id="TN_SystemCommand240" value="Simulate event: 0x8DFE appears"></Text>
+      <Text id="TN_SystemCommand241" value="Simulate event: 0x8DFE disappears"></Text>
+      <Text id="TN_SystemCommand242" value="Simulate event: 0x8DFF appears"></Text>
+      <Text id="TN_SystemCommand243" value="Simulate event: 0x8DFF disappears" />
+    </PrimaryLanguage>
+  </ExternalTextCollection>
+  <Stamp crc="4159714643"><Checker name="IODD-Checker V1.1.1" version="V1.1.1.0"/></Stamp>
+</IODevice>
