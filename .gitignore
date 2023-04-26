@@ -4,24 +4,24 @@
 ### AutomationStudio ###
 ## Automation Studio : ignore temporary files and build results (.gitignore parallel to *.apj)
 # Ignore AR versions as those are not considered part of the project
-/testProgram/AS/System/
+/SimpleProject/AS/System/
 # Ignore build results
-/testProgram/Binaries/
+/SimpleProject/Binaries/
 # Ignore debugging configurations (Watch,...)
-/testProgram/Diagnosis/
+/SimpleProject/Diagnosis/
 # Ignore Temporary Safety files
-/testProgram/Physical/*/*/*/DLFiles/
+/SimpleProject/Physical/*/*/*/DLFiles/
 # Ignore standard temp folder
-/testProgram/Temp/
+/SimpleProject/Temp/
 # Ignore upgrades as those are not considered part of the project source code
-/testProgram/Upgrades/
+/SimpleProject/Upgrades/
 # Ignore user settings file
-/testProgram/*.set
+/SimpleProject/*.set
 # Ignore is open indication
-/testProgram/*.isopen
+/SimpleProject/*.isopen
 # Ignore debug logs
-/testProgram/debug.log
+/SimpleProject/debug.log
 # Ignore Conversion logs (AS2 to AS3)
-/testProgram/ConvertLog.txt
+/SimpleProject/ConvertLog.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/automationstudio
