@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.12.3.127 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="OY1P303P0102_IODD1_1" Type="FBD.IOLink.GenericDeviceDTM.DTMCore.OY1P303P0102 IODD1.1" Version="1.6" OrderNumber="OY1P303P0102 IODD1.1">
+    <Connection Connector="IO-Link1" TargetModule="X67DS438A" TargetConnector="IF1" />
+    <Parameter ID="DtmId" Value="4b46072c-574b-4ea1-9a85-ffadd6b620ed" />
+  </Module>
   <Module Name="X20BM11" Type="X20BM11" Version="1.1.0.0">
     <Connection Connector="X2X1" TargetModule="X20CP1585" TargetConnector="IF6" />
   </Module>
