@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBD.IOLink.GenericDeviceDTM.DTMCore.OY1P303P0102 IODD1.1" Version="1.6" OrderNumber="OY1P303P0102 IODD1.1">
+      <SourceFile OriginalFile="wenglor-OY1P303P0102-20140820-IODD1.1.xml" TranslationFile="2F5PJ8SU.ext" />
+      <SourceFile OriginalFile="wenglor-logo.png" TranslationFile="RWKW8722.ext" />
+      <SourceFile OriginalFile="wenglor-OY1P303P0102-pic.png" TranslationFile="ULO4QKR2.ext" />
+      <SourceFile OriginalFile="wenglor-OY1P303P0102-con-pic.png" TranslationFile="BEMCVB5B.ext" />
+      <SourceFile OriginalFile="wenglor-OY1P303P0102-icon.png" TranslationFile="0SWJIUC7.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>
