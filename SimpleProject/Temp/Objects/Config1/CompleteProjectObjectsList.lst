@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.12.3.127 SP"?>
+<Objects>
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="133251822715518460" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="133251822715299355"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="133251822715299355"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="133251822715358888" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\operator\binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="133251822715448638" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="133251822715458641"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="133251822715458641"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="133251822715468667"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\runtime\binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="133251822715498556" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="133251822715498556"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="133251822715508494"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="133251822715508494"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\astime\binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="133251822715408763" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="133251822715388813"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="133251822715398791"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="133251822715408763"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="133251822715349235" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="133251822715318990"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="133251822715329023"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="133251822715329023"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\Config.pkg"
+    LogicalPath="Config1"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="133251822715528430" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\Hardware.hw"
+    LogicalPath="Config1.Hardware.hw"
+    Type="File"
+    LastWriteTime="133251822715538403"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\Hardware.hwl"
+    LogicalPath="Config1.Hardware.hwl"
+    Type="File"
+    LastWriteTime="133251822715538403"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\Cpu.pkg"
+    LogicalPath="Config1.X20CP1585"
+    Type="Cpu"
+    LastWriteTime="133251822715737878" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\Cpu.sw"
+    LogicalPath="Config1.X20CP1585.Cpu.sw"
+    Type="File"
+    LastWriteTime="133251822715747922"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\Cpu.per"
+    LogicalPath="Config1.X20CP1585.Cpu.per"
+    Type="File"
+    LastWriteTime="133251822715728044"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\IoMap.iom"
+    LogicalPath="Config1.X20CP1585.IoMap.iom"
+    Type="File"
+    LastWriteTime="133251822715847590"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\PvMap.vvm"
+    LogicalPath="Config1.X20CP1585.PvMap.vvm"
+    Type="File"
+    LastWriteTime="133251822715847590"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\Connectivity\Package.pkg"
+    LogicalPath="Config1.X20CP1585.Connectivity"
+    Type="Package"
+    LastWriteTime="133251822715718009" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\Connectivity\OpcUA\Package.pkg"
+    LogicalPath="Config1.X20CP1585.Connectivity.OpcUA"
+    Type="Package"
+    LastWriteTime="133251822715697983" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\Connectivity\OpcUaFx\Package.pkg"
+    LogicalPath="Config1.X20CP1585.Connectivity.OpcUaFx"
+    Type="Package"
+    LastWriteTime="133251822715707949" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\TextSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1585.TextSystem"
+    Type="Package"
+    LastWriteTime="133251822715857553" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\UnitSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1585.UnitSystem"
+    Type="Package"
+    LastWriteTime="133251822715867524" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity"
+    Type="Package"
+    LastWriteTime="133251822715658094" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\UserRoleSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.UserRoleSystem"
+    Type="Package"
+    LastWriteTime="133251822715678039" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\UserRoleSystem\Role.role"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.UserRoleSystem.Role.role"
+    Type="File"
+    LastWriteTime="133251822715678039"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\UserRoleSystem\User.user"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.UserRoleSystem.User.user"
+    Type="File"
+    LastWriteTime="133251822715688006"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore"
+    Type="Package"
+    LastWriteTime="133251822715618204" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\OwnCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.OwnCertificates"
+    Type="Package"
+    LastWriteTime="133251822715608219" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\OwnCertificates\Certificates\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.OwnCertificates.Certificates"
+    Type="Package"
+    LastWriteTime="133251822715598240" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\OwnCertificates\PrivateKeys\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.OwnCertificates.PrivateKeys"
+    Type="Package"
+    LastWriteTime="133251822715618204" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.ThirdPartyCertificates"
+    Type="Package"
+    LastWriteTime="133251822715628251" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\SoftwareCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.ThirdPartyCertificates.SoftwareCertificates"
+    Type="Package"
+    LastWriteTime="133251822715638246" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\CertificateRevocationLists\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.CertificateRevocationLists"
+    Type="Package"
+    LastWriteTime="133251822715578316" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\CertificateStore\CertificateSigningRequests\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.CertificateStore.CertificateSigningRequests"
+    Type="Package"
+    LastWriteTime="133251822715588276" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\TransportLayerSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.TransportLayerSecurity"
+    Type="Package"
+    LastWriteTime="133251822715668064" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\Firewall\Package.pkg"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.Firewall"
+    Type="Package"
+    LastWriteTime="133251822715648123" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\AccessAndSecurity\Firewall\Rules.firewallRules"
+    LogicalPath="Config1.X20CP1585.AccessAndSecurity.Firewall.Rules.firewallRules"
+    Type="File"
+    LastWriteTime="133251822715658094"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappControl\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappControl"
+    Type="Package"
+    LastWriteTime="133251822715877503" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappMotion\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappMotion"
+    Type="Package"
+    LastWriteTime="133251822715897523" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappServices\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappServices"
+    Type="Package"
+    LastWriteTime="133251822715937347" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappSafety\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappSafety"
+    Type="Package"
+    LastWriteTime="133251822715907421" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappSafety\SafeApplication\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappSafety.SafeApplication"
+    Type="Package"
+    LastWriteTime="133251822715917391" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappSafety\SafeCommissioning\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappSafety.SafeCommissioning"
+    Type="Package"
+    LastWriteTime="133251822715927367" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappView\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappView"
+    Type="Package"
+    LastWriteTime="133251822715947314" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappVision\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappVision"
+    Type="Package"
+    LastWriteTime="133251822715957286" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\mappCockpit\Package.pkg"
+    LogicalPath="Config1.X20CP1585.mappCockpit"
+    Type="Package"
+    LastWriteTime="133251822715867524" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Package.pkg"
+    LogicalPath="Config1.X20CP1585.DTM"
+    Type="Package"
+    LastWriteTime="133251822715837620" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\Package.pkg"
+    LogicalPath="Config1.X20CP1585.DTM.Communication"
+    Type="Package"
+    LastWriteTime="133251822715797775" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\Communication.dtm"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.Communication.dtm"
+    Type="File"
+    LastWriteTime="133251822715797775"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\CommDTM\Package.pkg"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.CommDTM"
+    Type="Package"
+    LastWriteTime="133251822715787734" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\CommDTM\CommDTM.dtmdre"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.CommDTM.CommDTM.dtmdre"
+    Type="File"
+    LastWriteTime="133251822715757818"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\CommDTM\CommDTM.dtmtre"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.CommDTM.CommDTM.dtmtre"
+    Type="File"
+    LastWriteTime="133251822715777779"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\CommDTM\CommDTM.dtmdri"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.CommDTM.CommDTM.dtmdri"
+    Type="File"
+    LastWriteTime="133251822715767792"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\X67DS438A\Package.pkg"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.X67DS438A"
+    Type="Package"
+    LastWriteTime="133251822715807812" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\X67DS438A\X67DS438A.dtmdre"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.X67DS438A.X67DS438A.dtmdre"
+    Type="File"
+    LastWriteTime="133251822715817646"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\X67DS438A\X67DS438A.dtmtre"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.X67DS438A.X67DS438A.dtmtre"
+    Type="File"
+    LastWriteTime="133251822715827624"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\X20CP1585\DTM\Communication\X67DS438A\X67DS438A.dtmdri"
+    LogicalPath="Config1.X20CP1585.DTM.Communication.X67DS438A.X67DS438A.dtmdri"
+    Type="File"
+    LastWriteTime="133251822715827624"
+    Private="false" />
+  <Object
+    Path="C:\Support\Tickets\400403083\nextTry03\SimpleProject\Physical\Config1\Hardware.jpg"
+    LogicalPath="Config1.Hardware.jpg"
+    Type="File"
+    LastWriteTime="133251822715558429"
+    Private="false" />
+</Objects>
