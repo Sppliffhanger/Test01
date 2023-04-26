@@ -14,5 +14,8 @@
       <SourceFile OriginalFile="wenglor-OY1P303P0102-con-pic.png" TranslationFile="6CE43YQ8.ext" />
       <SourceFile OriginalFile="wenglor-OY1P303P0102-icon.png" TranslationFile="WN0R75UO.ext" />
     </Module>
+    <Module ModuleID="FBD.IOLink.GenericDeviceDTM.DTMCore.E-BOX IO-LINK 2.01MPxxx IODD1.1" Version="1.0" OrderNumber="E-BOX IO-LINK 2.01MPxxx IODD1.1">
+      <SourceFile OriginalFile="RAFI-E-BOX-IO-LINK-2_01MPxxx-20201111-IODD1.1.xml" TranslationFile="0A5FRYYQ.ext" />
+    </Module>
   </Modules>
 </ExternalHardware>

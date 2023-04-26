@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IODevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.io-link.com/IODD/2010/10" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD1.1.xsd">
+	<DocumentInfo copyright="RAFI GmbH" releaseDate="2020-11-11" version="V1.0"/>
+	<ProfileHeader>
+		<ProfileIdentification>IO Device Profile</ProfileIdentification>
+		<ProfileRevision>1.1</ProfileRevision>
+		<ProfileName>Device Profile for IO Devices</ProfileName>
+		<ProfileSource>IO-Link Consortium</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>1</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>IODD</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity vendorId="1343" vendorName="RAFI GmbH and Co. KG" deviceId="65568">
+			<VendorText textId="TI_VendorText"/>
+			<VendorUrl textId="TI_VendorUrl"/>
+			<VendorLogo name="RAFI-logo.png"/>
+			<DeviceName textId="TI_DeviceName"/>
+			<DeviceFamily textId="TI_DeviceFamily"/>
+			<DeviceVariantCollection>
+				<DeviceVariant productId="1.24.200.001/0000" deviceIcon="RAFI-E-BOX-Button2-icon.png" deviceSymbol="RAFI-E-BOX-Button2-pic.png">
+					<Name textId="TI_Device1242000010000Name"/>
+					<Description textId="TI_Device1242000010000Description"/>
+				</DeviceVariant>
+			</DeviceVariantCollection>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Features blockParameter="true" dataStorage="true" profileCharacteristic="49 16384">
+				<SupportedAccessLocks parameter="true" dataStorage="true" localParameterization="false" localUserInterface="false"/>
+			</Features>
+			<DatatypeCollection>
+				<Datatype xsi:type="BooleanT" id="DT_ON_OFF">
+					<SingleValue value="false">
+						<Name textId="TN_OFF"/>
+					</SingleValue>
+					<SingleValue value="true">
+						<Name textId="TN_ON"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype xsi:type="UIntegerT" bitLength="3" id="DT_ColourPD">
+					<SingleValue value="0">
+						<Name textId="TN_Red"/>
+					</SingleValue>
+					<SingleValue value="1">
+						<Name textId="TN_Green"/>
+					</SingleValue>
+					<SingleValue value="2">
+						<Name textId="TN_Blue"/>
+					</SingleValue>
+					<SingleValue value="3">
+						<Name textId="TN_White"/>
+					</SingleValue>
+					<SingleValue value="4">
+						<Name textId="TN_Yellow"/>
+					</SingleValue>
+					<SingleValue value="5">
+						<Name textId="TN_VariableColour_1"/>
+					</SingleValue>
+					<SingleValue value="6">
+						<Name textId="TN_VariableColour_2"/>
+					</SingleValue>
+					<SingleValue value="7">
+						<Name textId="TN_VariableColour_3"/>
+					</SingleValue>
+				</Datatype>
+			</DatatypeCollection>
+			<VariableCollection>
+				<StdVariableRef id="V_DirectParameters_1"/>
+				<StdVariableRef id="V_DirectParameters_2"/>
+				<StdVariableRef id="V_SystemCommand">
+					<StdSingleValueRef value="130"/>
+				</StdVariableRef>
+				<StdVariableRef id="V_DeviceAccessLocks">
+					<StdRecordItemRef subindex="1" defaultValue="false"/>
+					<StdRecordItemRef subindex="2" defaultValue="false"/>
+				</StdVariableRef>
+				<StdVariableRef id="V_VendorName" defaultValue="RAFI GmbH and Co. KG"/>
+				<StdVariableRef id="V_VendorText" defaultValue="www.rafi.de"/>
+				<StdVariableRef id="V_ProductName"/>
+				<StdVariableRef id="V_ProductID"/>
+				<StdVariableRef id="V_ProductText"/>
+				<StdVariableRef id="V_SerialNumber"/>
+				<StdVariableRef id="V_HardwareRevision"/>
+				<StdVariableRef id="V_FirmwareRevision"/>
+				<StdVariableRef id="V_ApplicationSpecificTag" fixedLengthRestriction="32"/>
+				<StdVariableRef id="V_ErrorCount"/>
+				<StdVariableRef id="V_DeviceStatus"/>
+				<StdVariableRef id="V_DetailedDeviceStatus" fixedLengthRestriction="4"/>
+				<StdVariableRef id="V_ProcessDataInput"/>
+				<StdVariableRef id="V_ProcessDataOutput"/>
+				<Variable accessRights="rw" id="V_FunctionTag" index="25" >
+					<Datatype xsi:type="StringT" fixedLength="32" encoding="UTF-8"/>
+					<Name textId="TN_FunctionTag"/>
+				</Variable>
+				<Variable accessRights="rw" id="V_LocationTag" index="26" >
+					<Datatype xsi:type="StringT" fixedLength="32" encoding="UTF-8"/>
+					<Name textId="TN_LocationTag"/>
+				</Variable>
+				<Variable id="V_NightModeButton_1" defaultValue="1" accessRights="rw" index="100">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_25P"/>
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_50P"/>
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_75P"/>
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_NightModeButton_1"/>
+				</Variable>
+				<Variable id="V_BlinkModeButton_1" defaultValue="0" accessRights="rw" index="120">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_1Hz_50_DC"/>
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_2Hz_50_DC"/>
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_1Hz_80_DC"/>
+						</SingleValue>
+						<SingleValue value="3">
+							<Name textId="TN_2Hz_80_DC"/>
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_BlinkModeButton_1"/>
+				</Variable>
+				<Variable id="V_NightModeButton_2" defaultValue="1" accessRights="rw" index="101">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_25P"/>
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_50P"/>
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_75P"/>
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_NightModeButton_2"/>
+				</Variable>
+				<Variable id="V_BlinkModeButton_2" defaultValue="0" accessRights="rw" index="121">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_1Hz_50_DC"/>
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_2Hz_50_DC"/>
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_1Hz_80_DC"/>
+						</SingleValue>
+						<SingleValue value="3">
+							<Name textId="TN_2Hz_80_DC"/>
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_BlinkModeButton_2"/>
+				</Variable>
+				<Variable id="V_VariableColour_1_R" defaultValue="255" accessRights="rw" index="140">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_1_R"/>
+				</Variable>
+				<Variable id="V_VariableColour_1_G" defaultValue="140" accessRights="rw" index="141">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_1_G"/>
+				</Variable>
+				<Variable id="V_VariableColour_1_B" defaultValue="0" accessRights="rw" index="142">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_1_B"/>
+				</Variable>
+				<Variable id="V_VariableColour_2_R" defaultValue="135" accessRights="rw" index="143">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_2_R"/>
+				</Variable>
+				<Variable id="V_VariableColour_2_G" defaultValue="206" accessRights="rw" index="144">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_2_G"/>
+				</Variable>
+				<Variable id="V_VariableColour_2_B" defaultValue="250" accessRights="rw" index="145">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_2_B"/>
+				</Variable>
+				<Variable id="V_VariableColour_3_R" defaultValue="255" accessRights="rw" index="146">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_3_R"/>
+				</Variable>
+				<Variable id="V_VariableColour_3_G" defaultValue="0" accessRights="rw" index="147">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_3_G"/>
+				</Variable>
+				<Variable id="V_VariableColour_3_B" defaultValue="255" accessRights="rw" index="148">
+					<Datatype xsi:type="UIntegerT" bitLength="8"/>
+					<Name textId="TN_VariableColour_3_B"/>
+				</Variable>
+				<Variable index="17342" accessRights="ro" id="V_HW_ID_Key" defaultValue="E-BOX M12 IO-LINK">
+					<Datatype xsi:type="StringT" encoding="UTF-8" fixedLength="24"/>
+					<Name textId="TN_HW_ID_Key"/>
+				</Variable>
+				<Variable index="17343" accessRights="ro" id="V_BootmodeStatus">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_BootmodeStatus_Inactive"/>
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_BootmodeStatus_Active"/>
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_BootmodeStatus"/>
+				</Variable>
+			</VariableCollection>
+			<ProcessDataCollection>
+				<ProcessData id="V_ProcessData">
+					<ProcessDataIn id="PD_IN_Single" bitLength="8">
+						<Datatype xsi:type="RecordT" bitLength="8" subindexAccessSupported="false">
+							<RecordItem subindex="1" bitOffset="0">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_IN_BUTTON_1_CONTACT_1"/>
+							</RecordItem>
+							<RecordItem subindex="3" bitOffset="2">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_IN_BUTTON_2_CONTACT_1"/>
+							</RecordItem>
+							<RecordItem subindex="5" bitOffset="7">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_IN_Validity"/>
+							</RecordItem>
+						</Datatype>
+						<Name textId="PD_IN_ProcessDataIN"/>
+					</ProcessDataIn>
+					<ProcessDataOut id="PD_Out_Single" bitLength="16">
+						<Datatype xsi:type="RecordT" bitLength="16" subindexAccessSupported="false">
+							<RecordItem subindex="1" bitOffset="0">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_Out_ILLUMINATION_BUTTON_1"/>
+							</RecordItem>
+							<RecordItem subindex="2" bitOffset="1">
+								<DatatypeRef datatypeId="DT_ColourPD"/>
+								<Name textId="TN_PD_Out_Colour_BUTTON_1"/>
+							</RecordItem>
+							<RecordItem subindex="3" bitOffset="4">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_Out_Blink_Mode_BUTTON_1"/>
+							</RecordItem>
+							<RecordItem subindex="4" bitOffset="5">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_Out_Night_Mode_BUTTON_1"/>
+							</RecordItem>
+							<RecordItem subindex="5" bitOffset="8">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_Out_ILLUMINATION_BUTTON_2"/>
+							</RecordItem>
+							<RecordItem subindex="6" bitOffset="9">
+								<DatatypeRef datatypeId="DT_ColourPD"/>
+								<Name textId="TN_PD_Out_Colour_BUTTON_2"/>
+							</RecordItem>
+							<RecordItem subindex="7" bitOffset="12">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_Out_Blink_Mode_BUTTON_2"/>
+							</RecordItem>
+							<RecordItem subindex="8" bitOffset="13">
+								<DatatypeRef datatypeId="DT_ON_OFF"/>
+								<Name textId="TN_PD_Out_Night_Mode_BUTTON_2"/>
+							</RecordItem>
+						</Datatype>
+						<Name textId="PD_OUT_ProcessDataOUT"/>
+					</ProcessDataOut>
+				</ProcessData>
+			</ProcessDataCollection>
+			<EventCollection>
+				<StdEventRef code="20752"/>
+				<StdEventRef code="20753"/>
+				<StdEventRef code="16384"/>
+				<StdEventRef code="16928"/>
+				<StdEventRef code="4096"/>
+				<Event code="6160" type="Error">
+					<Name textId="TN_Event_Illumination_Error"/>
+				</Event>
+			</EventCollection>
+			<UserInterface>
+				<MenuCollection>
+					<Menu id="M_Identification">
+						<Name textId="TN_M_Identification"/>
+						<VariableRef variableId="V_VendorName"/>
+						<VariableRef variableId="V_VendorText"/>
+						<VariableRef variableId="V_ProductID"/>
+						<VariableRef variableId="V_ProductName"/>
+						<VariableRef variableId="V_ProductText"/>
+						<VariableRef variableId="V_SerialNumber"/>
+						<VariableRef variableId="V_HardwareRevision"/>
+						<VariableRef variableId="V_FirmwareRevision"/>
+						<VariableRef variableId="V_HW_ID_Key"/>
+						<VariableRef variableId="V_ApplicationSpecificTag" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_FunctionTag" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_LocationTag" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="M_Diagnosis">
+						<VariableRef variableId="V_DeviceStatus"></VariableRef>
+						<VariableRef variableId="V_DetailedDeviceStatus"></VariableRef>
+						<VariableRef variableId="V_ErrorCount"></VariableRef>
+					</Menu>
+					<Menu id="M_Observer">
+						<Name textId="TN_M_Observer"/>
+						<VariableRef variableId="V_NightModeButton_1" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_NightModeButton_2" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_BlinkModeButton_1" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_BlinkModeButton_2" accessRightRestriction="ro"/>
+						<MenuRef menuId="ME_ObservVariableColours"/>
+					</Menu>
+					<Menu id="ME_ObservVariableColours">
+						<Name textId="TN_ME_ObservVariableColours"/>
+						<MenuRef menuId="ME_ObservVariableColour_1"/>
+						<MenuRef menuId="ME_ObservVariableColour_2"/>
+						<MenuRef menuId="ME_ObservVariableColour_3"/>
+					</Menu>
+					<Menu id="ME_ObservVariableColour_1">
+						<Name textId="TN_ME_ObservVariableColour_1"/>
+						<VariableRef variableId="V_VariableColour_1_R" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_VariableColour_1_G" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_VariableColour_1_B" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="ME_ObservVariableColour_2">
+						<Name textId="TN_ME_ObservVariableColour_2"/>
+						<VariableRef variableId="V_VariableColour_2_R" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_VariableColour_2_G" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_VariableColour_2_B" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="ME_ObservVariableColour_3">
+						<Name textId="TN_ME_ObservVariableColour_3"/>
+						<VariableRef variableId="V_VariableColour_3_R" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_VariableColour_3_G" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_VariableColour_3_B" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="M_Parameter">
+						<Name textId="TN_M_Parameter"/>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="130"/>
+						</VariableRef>
+						<VariableRef variableId="V_ApplicationSpecificTag"/>
+						<VariableRef variableId="V_FunctionTag"/>
+						<VariableRef variableId="V_LocationTag"/>
+						<MenuRef menuId="ME_ParamButton_1"/>
+						<MenuRef menuId="ME_ParamButton_2"/>
+						<MenuRef menuId="ME_ParamVariableColours"/>
+					</Menu>
+					<Menu id="ME_ParamVariableColours">
+						<Name textId="TN_ME_ParamColours"/>
+						<MenuRef menuId="ME_ParamVariableColour_1"/>
+						<MenuRef menuId="ME_ParamVariableColour_2"/>
+						<MenuRef menuId="ME_ParamVariableColour_3"/>
+					</Menu>
+					<Menu id="ME_ParamVariableColour_1">
+						<Name textId="TN_ME_ParamVariableColour_1"/>
+						<VariableRef variableId="V_VariableColour_1_R"/>
+						<VariableRef variableId="V_VariableColour_1_G"/>
+						<VariableRef variableId="V_VariableColour_1_B"/>
+					</Menu>
+					<Menu id="ME_ParamVariableColour_2">
+						<Name textId="TN_ME_ParamVariableColour_2"/>
+						<VariableRef variableId="V_VariableColour_2_R"/>
+						<VariableRef variableId="V_VariableColour_2_G"/>
+						<VariableRef variableId="V_VariableColour_2_B"/>
+					</Menu>
+					<Menu id="ME_ParamVariableColour_3">
+						<Name textId="TN_ME_ParamVariableColour_3"/>
+						<VariableRef variableId="V_VariableColour_3_R"/>
+						<VariableRef variableId="V_VariableColour_3_G"/>
+						<VariableRef variableId="V_VariableColour_3_B"/>
+					</Menu>
+					<Menu id="ME_ParamButton_1">
+						<Name textId="TN_ME_ParamButton_1"/>
+						<VariableRef variableId="V_NightModeButton_1"/>
+						<VariableRef variableId="V_BlinkModeButton_1"/>
+					</Menu>
+					<Menu id="ME_ParamButton_2">
+						<Name textId="TN_ME_ParamButton_2"/>
+						<VariableRef variableId="V_NightModeButton_2"/>
+						<VariableRef variableId="V_BlinkModeButton_2"/>
+					</Menu>
+				</MenuCollection>
+				<ObserverRoleMenuSet>
+					<IdentificationMenu menuId="M_Identification"/>
+					<ObservationMenu menuId="M_Observer"/>
+					<DiagnosisMenu menuId="M_Diagnosis"/>
+				</ObserverRoleMenuSet>
+				<MaintenanceRoleMenuSet>
+					<IdentificationMenu menuId="M_Identification"/>
+					<ParameterMenu menuId="M_Parameter"/>
+					<ObservationMenu menuId="M_Observer"/>
+					<DiagnosisMenu menuId="M_Diagnosis"/>
+				</MaintenanceRoleMenuSet>
+				<SpecialistRoleMenuSet>
+					<IdentificationMenu menuId="M_Identification"/>
+					<ParameterMenu menuId="M_Parameter"/>
+					<ObservationMenu menuId="M_Observer"/>
+					<DiagnosisMenu menuId="M_Diagnosis"/>
+				</SpecialistRoleMenuSet>
+			</UserInterface>
+		</DeviceFunction>
+	</ProfileBody>
+	<CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.1">
+		<TransportLayers>
+			<PhysicalLayer bitrate="COM2" minCycleTime="5000" sioSupported="false" mSequenceCapability="43">
+				<Connection xsi:type="M12-4ConnectionT" connectionSymbol="RAFI-M12-Pinning-con-pic.png">
+					<ProductRef productId="1.24.200.001/0000"/>
+					<Wire1 function="L+"/>
+					<Wire2 function="NC"/>
+					<Wire3 function="L-"/>
+					<Wire4 function="C/Q"/>
+				</Connection>
+			</PhysicalLayer>
+		</TransportLayers>
+		<Test>
+			<Config1 index="200" testValue="0x0C"/>
+			<Config2 index="1000" testValue="0xBB"/>
+			<Config3 index="24" testValue="0x06,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x04"/>
+			<Config7 index="201">
+				<EventTrigger appearValue="1" disappearValue="2"/>
+				<EventTrigger appearValue="3" disappearValue="4"/>
+			</Config7>
+		</Test>
+	</CommNetworkProfile>
+	<ExternalTextCollection>
+		<PrimaryLanguage xml:lang="en">
+			<Text id="TI_VendorText" value="www.rafi.de"/>
+			<Text id="TI_VendorUrl" value="www.rafi.de/io-link"/>
+			<Text id="TI_DeviceName" value="E-BOX IO-LINK 2.01MPxxx"/>
+			<Text id="TI_DeviceFamily" value="E-BOX IO-LINK"/>
+			<Text id="TI_Device1242000010000Description" value="2x Pushbutton each 1 NO tactile feedback &amp; RGB LED"/>
+			<Text id="TI_Device1242000010000Name" value="E-BOX IO-LINK 2.01MP001"/>
+			<Text id="TN_FunctionTag" value="Functiontag"/>
+			<Text id="TN_LocationTag" value="Locationtag"/>
+			<Text id="TN_NightModeButton_1" value="Brightness Night Mode Button 1"/>
+			<Text id="TN_NightModeButton_2" value="Brightness Night Mode Button 2"/>
+			<Text id="TN_25P" value="25 %"/>
+			<Text id="TN_50P" value="50 %"/>
+			<Text id="TN_75P" value="75 %"/>
+			<Text id="TN_BlinkModeButton_1" value="Blink Mode Button 1"/>
+			<Text id="TN_BlinkModeButton_2" value="Blink Mode Button 2"/>
+			<Text id="TN_1Hz_50_DC" value="1 Hz / 50 % Duty Cycle"/>
+			<Text id="TN_2Hz_50_DC" value="2 Hz / 50 % Duty Cycle"/>
+			<Text id="TN_1Hz_80_DC" value="1 Hz / 80 % Duty Cycle"/>
+			<Text id="TN_2Hz_80_DC" value="2 Hz / 80 % Duty Cycle"/>
+			<Text id="TN_VariableColour_1_R" value="R-Value Colour 1"/>
+			<Text id="TN_VariableColour_1_G" value="G-Value Colour 1"/>
+			<Text id="TN_VariableColour_1_B" value="B-Value Colour 1"/>
+			<Text id="TN_VariableColour_2_R" value="R-Value Colour 2"/>
+			<Text id="TN_VariableColour_2_G" value="G-Value Colour 2"/>
+			<Text id="TN_VariableColour_2_B" value="B-Value Colour 2"/>
+			<Text id="TN_VariableColour_3_R" value="R-Value Colour 3"/>
+			<Text id="TN_VariableColour_3_G" value="G-Value Colour 3"/>
+			<Text id="TN_VariableColour_3_B" value="B-Value Colour 3"/>
+			<Text id="TN_ME_ObservVariableColours" value="Variable Colours"/>
+			<Text id="TN_ME_ObservVariableColour_1" value="Variable Colour 1"/>
+			<Text id="TN_ME_ObservVariableColour_2" value="Variable Colour 2"/>
+			<Text id="TN_ME_ObservVariableColour_3" value="Variable Colour 3"/>
+			<Text id="TN_ME_ParamButton_1" value="Settings Button 1"/>
+			<Text id="TN_ME_ParamButton_2" value="Settings Button 2"/>
+			<Text id="TN_ME_ParamVariableColour_1" value="RGB Values Variable Colour 1"/>
+			<Text id="TN_ME_ParamVariableColour_2" value="RGB Values Variable Colour 2"/>
+			<Text id="TN_ME_ParamVariableColour_3" value="RGB Values Variable Colour 3"/>
+			<Text id="TN_HW_ID_Key" value="Hardware Identification Key"/>
+			<Text id="TN_BootmodeStatus" value="Bootmode status"/>
+			<Text id="TN_BootmodeStatus_Inactive" value="Boot loader is inactive"/>
+			<Text id="TN_BootmodeStatus_Active" value="Boot loader is active"/>
+			<Text id="TN_Event_Illumination_Error" value="Illumination Error"/>
+			<Text id="PD_IN_ProcessDataIN" value="Process Data IN"/>
+			<Text id="PD_OUT_ProcessDataOUT" value="Process Data OUT"/>
+			<Text id="TN_Red" value="Red"/>
+			<Text id="TN_Green" value="Green"/>
+			<Text id="TN_Blue" value="Blue"/>
+			<Text id="TN_White" value="White"/>
+			<Text id="TN_Yellow" value="Yellow"/>
+			<Text id="TN_VariableColour_1" value="Variable Colour 1"/>
+			<Text id="TN_VariableColour_2" value="Variable Colour 2"/>
+			<Text id="TN_VariableColour_3" value="Variable Colour 3"/>
+			<Text id="TN_M_Identification" value="MENU_Identification"/>
+			<Text id="TN_M_Observer" value="MENU_Observer"/>
+			<Text id="TN_M_Parameter" value="MENU_Parameter"/>
+			<Text id="TN_ME_ParamColours" value="Colour Settings"/>
+			<Text id="TN_ON" value="ON"/>
+			<Text id="TN_OFF" value="OFF"/>
+			<Text id="TN_PD_IN_BUTTON_1_CONTACT_1" value="Contact 1 Button 1"/>
+			<Text id="TN_PD_IN_BUTTON_2_CONTACT_1" value="Contact 1 Button 2"/>
+			<Text id="TN_PD_IN_Validity" value="Validity"/>
+			<Text id="TN_PD_Out_ILLUMINATION_BUTTON_1" value="Illumination Button 1"/>
+			<Text id="TN_PD_Out_Colour_BUTTON_1" value="Colour Button 1"/>
+			<Text id="TN_PD_Out_Blink_Mode_BUTTON_1" value="Blink Mode Button 1"/>
+			<Text id="TN_PD_Out_Night_Mode_BUTTON_1" value="Night Mode Button 1"/>
+			<Text id="TN_PD_Out_ILLUMINATION_BUTTON_2" value="Illumination Button 2"/>
+			<Text id="TN_PD_Out_Colour_BUTTON_2" value="Colour Button 2"/>
+			<Text id="TN_PD_Out_Blink_Mode_BUTTON_2" value="Blink Mode Button 2"/>
+			<Text id="TN_PD_Out_Night_Mode_BUTTON_2" value="Night Mode Button 2"/>
+		</PrimaryLanguage>
+	</ExternalTextCollection>
+	<Stamp crc="1461515636"><Checker name="IODD-Checker V1.1.4" version="V1.1.4.0"/></Stamp>
+</IODevice>
