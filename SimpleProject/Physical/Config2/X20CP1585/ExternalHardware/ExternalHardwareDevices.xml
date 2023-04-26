@@ -8,5 +8,8 @@
       <SourceFile OriginalFile="wenglor-OY1P303P0102-con-pic.png" TranslationFile="BEMCVB5B.ext" />
       <SourceFile OriginalFile="wenglor-OY1P303P0102-icon.png" TranslationFile="0SWJIUC7.ext" />
     </Module>
+    <Module ModuleID="FBD.IOLink.GenericDeviceDTM.DTMCore.EHPS-16-A-LK IODD1.1" Version="1.1.2" OrderNumber="EHPS-16-A-LK IODD1.1">
+      <SourceFile OriginalFile="Festo-EHPS-16-20190619-IODD1.1.xml" TranslationFile="V7QF8TNB.ext" />
+    </Module>
   </Modules>
 </ExternalHardware>

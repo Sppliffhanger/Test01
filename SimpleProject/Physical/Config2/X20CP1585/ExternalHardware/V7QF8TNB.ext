@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IODevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.io-link.com/IODD/2010/10" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD1.1.xsd">
+	<DocumentInfo version="V1.1.2" releaseDate="2019-06-19" copyright="Copyright 2019, Festo AG &amp; Co. KG"/>
+	<ProfileHeader>
+		<ProfileIdentification>IO Device Profile</ProfileIdentification>
+		<ProfileRevision>1.1</ProfileRevision>
+		<ProfileName>Device Profile for IO Devices</ProfileName>
+		<ProfileSource>IO-Link Consortium</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>1</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>IODD</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity vendorId="333" vendorName="Festo AG &amp; Co. KG" deviceId="49">
+			<VendorText textId="T_VendorText"/>
+			<VendorUrl textId="T_VendorUrl"/>
+			<VendorLogo name="Festo-logo.png"/>
+			<DeviceName textId="T_DeviceName"/>
+			<DeviceFamily textId="T_DeviceFamily"/>
+			<DeviceVariantCollection>
+				<DeviceVariant productId="8103809" deviceSymbol="Festo-EHPS-pic.png" deviceIcon="Festo-EHPS-icon.png">
+					<Name textId="TN_ProductName1"/>
+					<Description textId="TD_ProductText1"/>
+				</DeviceVariant>
+			</DeviceVariantCollection>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Features blockParameter="true" dataStorage="true">
+				<SupportedAccessLocks localUserInterface="false" dataStorage="true" parameter="true" localParameterization="false"/>
+			</Features>
+			<DatatypeCollection>
+				<Datatype id="D_GripMode" xsi:type="UIntegerT" bitLength="8">
+					<SingleValue value="100">
+						<Name textId="TN_GripMode_Universal"/>
+					</SingleValue>
+					<SingleValue value="60">
+						<Name textId="TN_GripMode_ext"/>
+					</SingleValue>
+					<SingleValue value="70">
+						<Name textId="TN_GripMode_int"/>
+					</SingleValue>
+					<SingleValue value="0">
+						<Name textId="TN_GripMode_Invalid"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_GripForce" xsi:type="UIntegerT" bitLength="8">
+					<SingleValue value="0">
+						<Name textId="TN_GripForce_Invalid"/>
+					</SingleValue>
+					<SingleValue value="1">
+						<Name textId="TN_GripForce_1"/>
+					</SingleValue>
+					<SingleValue value="2">
+						<Name textId="TN_GripForce_2"/>
+					</SingleValue>
+					<SingleValue value="3">
+						<Name textId="TN_GripForce_3"/>
+					</SingleValue>
+					<SingleValue value="4">
+						<Name textId="TN_GripForce_4"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Position" xsi:type="UIntegerT" bitLength="16">
+					<ValueRange xsi:type="UIntegerValueRangeT" lowerValue="0" upperValue="2150"/>
+				</Datatype>
+				<Datatype id="D_GrippingTolerance" xsi:type="UIntegerT" bitLength="8">
+					<ValueRange xsi:type="UIntegerValueRangeT" lowerValue="0" upperValue="255"/>
+				</Datatype>
+				<Datatype id="D_WorkpieceNo" xsi:type="UIntegerT" bitLength="8">
+					<ValueRange xsi:type="UIntegerValueRangeT" lowerValue="0" upperValue="32"/>
+				</Datatype>
+				<Datatype id="D_Control" xsi:type="UIntegerT" bitLength="16">
+					<SingleValue value="0">
+						<Name textId="TN_Control_Idle"/>
+					</SingleValue>
+					<SingleValue value="1">
+						<Name textId="TN_Control_LatchData"/>
+					</SingleValue>
+					<SingleValue value="2">
+						<Name textId="TN_Control_StoreWPno"/>
+					</SingleValue>
+					<SingleValue value="4">
+						<Name textId="TN_Control_ResDirFlag"/>
+					</SingleValue>
+					<SingleValue value="8">
+						<Name textId="TN_Control_TeachGripPos"/>
+					</SingleValue>
+					<SingleValue value="128">
+						<Name textId="TN_Control_FindEndPos"/>
+					</SingleValue>
+					<SingleValue value="256">
+						<Name textId="TN_Control_Open"/>
+					</SingleValue>
+					<SingleValue value="512">
+						<Name textId="TN_Control_Close"/>
+					</SingleValue>
+					<SingleValue value="32768">
+						<Name textId="TN_Control_ResetError"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_Error" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_ErrorTrue"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_ErrorFalse"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_DirCloseFlag" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_DirClose"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_DirOpenFlag" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_DirOpen"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_Latch" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_LatchDataOk"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_PosUndef" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_PosUndef"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_PosClose" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_PosClose"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_PosGrip" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_PosGrip"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_PosOpen" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_PosOpen"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_Inactive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_Status_SysRdy" xsi:type="BooleanT">
+					<SingleValue value="true">
+						<Name textId="TN_Status_DeviceActive"/>
+					</SingleValue>
+					<SingleValue value="false">
+						<Name textId="TN_Status_DeviceNotActive"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_StatusWord" xsi:type="RecordT" bitLength="16" subindexAccessSupported="false">
+					<RecordItem subindex="1" bitOffset="15">
+						<DatatypeRef datatypeId="D_Status_Error"/>
+						<Name textId="TN_Status_Error"/>
+						<Description textId="TD_Status_Error"/>
+					</RecordItem>
+					<RecordItem subindex="2" bitOffset="14">
+						<DatatypeRef datatypeId="D_Status_DirCloseFlag"/>
+						<Name textId="TN_Status_DirCloseFlag"/>
+						<Description textId="TD_Status_DirCloseFlag"/>
+					</RecordItem>
+					<RecordItem subindex="3" bitOffset="13">
+						<DatatypeRef datatypeId="D_Status_DirOpenFlag"/>
+						<Name textId="TN_Status_DirOpenFlag"/>
+						<Description textId="TD_Status_DirOpenFlag"/>
+					</RecordItem>
+					<RecordItem subindex="4" bitOffset="12">
+						<DatatypeRef datatypeId="D_Status_Latch"/>
+						<Name textId="TN_Status_LatchDataFlag"/>
+						<Description textId="TD_Status_LatchDataFlag"/>
+					</RecordItem>
+					<RecordItem subindex="5" bitOffset="11">
+						<DatatypeRef datatypeId="D_Status_PosUndef"/>
+						<Name textId="TN_Status_PosUndefFlag"/>
+					</RecordItem>
+					<RecordItem subindex="6" bitOffset="10">
+						<DatatypeRef datatypeId="D_Status_PosClose"/>
+						<Name textId="TN_Status_PosCloseFlag"/>
+					</RecordItem>
+					<RecordItem subindex="7" bitOffset="9">
+						<DatatypeRef datatypeId="D_Status_PosGrip"/>
+						<Name textId="TN_Status_PosGripFlag"/>
+					</RecordItem>
+					<RecordItem subindex="8" bitOffset="8">
+						<DatatypeRef datatypeId="D_Status_PosOpen"/>
+						<Name textId="TN_Status_PosOpenFlag"/>
+					</RecordItem>
+					<RecordItem subindex="9" bitOffset="6">
+						<DatatypeRef datatypeId="D_Status_SysRdy"/>
+						<Name textId="TN_Status_Ready"/>
+					</RecordItem>
+				</Datatype>
+				<Datatype id="D_ErrNo" xsi:type="UIntegerT" bitLength="16">
+					<SingleValue value="0">
+						<Name textId="TN_Err_x000"/>
+					</SingleValue>
+					<SingleValue value="256">
+						<Name textId="TN_Err_x100"/>
+					</SingleValue>
+					<SingleValue value="257">
+						<Name textId="TN_Err_x101"/>
+					</SingleValue>
+					<SingleValue value="258">
+						<Name textId="TN_Err_x102"/>
+					</SingleValue>
+					<SingleValue value="266">
+						<Name textId="TN_Err_x10A"/>
+					</SingleValue>
+					<SingleValue value="768">
+						<Name textId="TN_Err_x300"/>
+					</SingleValue>
+					<SingleValue value="769">
+						<Name textId="TN_Err_x301"/>
+					</SingleValue>
+					<SingleValue value="770">
+						<Name textId="TN_Err_x302"/>
+					</SingleValue>
+					<SingleValue value="772">
+						<Name textId="TN_Err_x304"/>
+					</SingleValue>
+					<SingleValue value="773">
+						<Name textId="TN_Err_x305"/>
+					</SingleValue>
+					<SingleValue value="774">
+						<Name textId="TN_Err_x306"/>
+					</SingleValue>
+					<SingleValue value="775">
+						<Name textId="TN_Err_x307"/>
+					</SingleValue>
+					<SingleValue value="776">
+						<Name textId="TN_Err_x308"/>
+					</SingleValue>
+					<SingleValue value="777">
+						<Name textId="TN_Err_x309"/>
+					</SingleValue>
+					<SingleValue value="781">
+						<Name textId="TN_Err_x30D"/>
+					</SingleValue>
+					<SingleValue value="783">
+						<Name textId="TN_Err_x30F"/>
+					</SingleValue>
+					<SingleValue value="784">
+						<Name textId="TN_Err_x310"/>
+					</SingleValue>
+					<SingleValue value="785">
+						<Name textId="TN_Err_x311"/>
+					</SingleValue>
+					<SingleValue value="786">
+						<Name textId="TN_Err_x312"/>
+					</SingleValue>
+					<SingleValue value="1024">
+						<Name textId="TN_Err_x400"/>
+					</SingleValue>
+					<SingleValue value="1030">
+						<Name textId="TN_Err_x406"/>
+					</SingleValue>
+				</Datatype>
+				<Datatype id="D_WorkpieceSet" xsi:type="RecordT" bitLength="40" subindexAccessSupported="true">
+					<RecordItem subindex="1" bitOffset="32">
+						<DatatypeRef datatypeId="D_GripMode"/>
+						<Name textId="TN_GripMode"/>
+						<Description textId="TD_GripMode"/>
+					</RecordItem>
+					<RecordItem subindex="2" bitOffset="24">
+						<DatatypeRef datatypeId="D_GripForce"/>
+						<Name textId="TN_GripForce"/>
+						<Description textId="TD_GripForce"/>
+					</RecordItem>
+					<RecordItem subindex="3" bitOffset="8">
+						<DatatypeRef datatypeId="D_Position"/>
+						<Name textId="TN_GripPos"/>
+						<Description textId="TD_Position"/>
+					</RecordItem>
+					<RecordItem subindex="4" bitOffset="0">
+						<DatatypeRef datatypeId="D_GrippingTolerance"/>
+						<Name textId="TN_GripTol"/>
+						<Description textId="TD_GripTol"/>
+					</RecordItem>
+				</Datatype>
+			</DatatypeCollection>
+			<VariableCollection>
+				<StdVariableRef id="V_DirectParameters_1"/>
+				<!--0-->
+				<StdVariableRef id="V_DirectParameters_2"/>
+				<!--1-->
+				<StdVariableRef id="V_SystemCommand">
+					<!--2-->
+					<StdSingleValueRef value="130"/>
+					<!-- Restore Factory Settings-->
+					<SingleValue value="160">
+						<Name textId="TN_SystemCommand_Activate"/>
+					</SingleValue>
+					<SingleValue value="161">
+						<Name textId="TN_SystemCommand_GripperClose"/>
+					</SingleValue>
+					<SingleValue value="162">
+						<Name textId="TN_SystemCommand_GripperOpen"/>
+					</SingleValue>
+				</StdVariableRef>
+				<StdVariableRef id="V_DeviceAccessLocks">
+					<StdRecordItemRef subindex="1" defaultValue="false"/>
+					<StdRecordItemRef subindex="2" defaultValue="false"/>
+				</StdVariableRef>
+				<!--12-->
+				<StdVariableRef id="V_VendorName" defaultValue="Festo AG &amp; Co. KG"/>
+				<!--16-->
+				<StdVariableRef id="V_VendorText" defaultValue="http://www.festo.com"/>
+				<!--17-->
+				<StdVariableRef id="V_ProductName" fixedLengthRestriction="32"/>
+				<!--18-->
+				<StdVariableRef id="V_ProductID" fixedLengthRestriction="32"/>
+				<!--19-->
+				<StdVariableRef id="V_ProductText" fixedLengthRestriction="32"/>
+				<!--20-->
+				<StdVariableRef id="V_SerialNumber" fixedLengthRestriction="16"/>
+				<!--21-->
+				<StdVariableRef id="V_HardwareRevision" fixedLengthRestriction="32"/>
+				<!--22-->
+				<StdVariableRef id="V_FirmwareRevision" fixedLengthRestriction="32"/>
+				<!--23-->
+				<StdVariableRef id="V_ApplicationSpecificTag" fixedLengthRestriction="32"/>
+				<!--24-->
+				<StdVariableRef id="V_ErrorCount"/>
+				<!--32-->
+				<!-- 33-35 reserved -->
+				<StdVariableRef id="V_DeviceStatus"/>
+				<!--36-->
+				<StdVariableRef id="V_DetailedDeviceStatus" fixedLengthRestriction="4"/>
+				<!--37-->
+				<StdVariableRef id="V_ProcessDataInput"/>
+				<!--40-->
+				<StdVariableRef id="V_ProcessDataOutput"/>
+				<!--41-->
+				<Variable accessRights="ro" id="V_Idx0040Status" index="64" dynamic="true">
+					<DatatypeRef datatypeId="D_StatusWord"/>
+					<Name textId="TN_Status"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0041ErrorNo" index="65" dynamic="true">
+					<DatatypeRef datatypeId="D_ErrNo"/>
+					<Name textId="TN_ErrNo"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0042CycleCounter" index="66" dynamic="true">
+					<Datatype xsi:type="UIntegerT" bitLength="32"/>
+					<Name textId="TN_CycleCounter"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0043Temperature" index="67" dynamic="true">
+					<Datatype xsi:type="IntegerT" bitLength="16"/>
+					<Name textId="TN_Temperature"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0044ControlWord" index="68" dynamic="true">
+					<DatatypeRef datatypeId="D_Control"/>
+					<Name textId="TN_Control"/>
+					<Description textId="TD_Control"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0045ErrorMessage" index="69" dynamic="true">
+					<Datatype xsi:type="StringT" fixedLength="64" encoding="UTF-8"/>
+					<Name textId="TN_ErrorMessage"/>
+					<Description textId="TD_ErrorMessage"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0100ActualPosition" index="256" dynamic="true">
+					<DatatypeRef datatypeId="D_Position"/>
+					<Name textId="TN_ActualPos"/>
+					<Description textId="TD_Position"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0101GrippingPosition" index="257" dynamic="true">
+					<DatatypeRef datatypeId="D_Position"/>
+					<Name textId="TN_GripPos"/>
+					<Description textId="TD_Position"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0102WorkpieceNo" index="258" dynamic="true">
+					<DatatypeRef datatypeId="D_WorkpieceNo"/>
+					<Name textId="TN_WorkpieceNo"/>
+					<Description textId="TD_WorkpieceNo"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0103GripMode" index="259" dynamic="true">
+					<DatatypeRef datatypeId="D_GripMode"/>
+					<Name textId="TN_GripMode"/>
+					<Description textId="TD_GripMode"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0104GrippingTolerance" index="260" dynamic="true">
+					<DatatypeRef datatypeId="D_GrippingTolerance"/>
+					<Name textId="TN_GripTol"/>
+					<Description textId="TD_GripTol"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0105GrippingForce" index="261" dynamic="true">
+					<DatatypeRef datatypeId="D_GripForce"/>
+					<Name textId="TN_GripForce"/>
+					<Description textId="TD_GripForce"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0800WPSet1" index="2048">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet1"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0801WPSet2" index="2049">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet2"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0802WPSet3" index="2050">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet3"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0803WPSet4" index="2051">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet4"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0804WPSet5" index="2052">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet5"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0805WPSet6" index="2053">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet6"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0806WPSet7" index="2054">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet7"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0807WPSet8" index="2055">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet8"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0808WPSet9" index="2056">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet9"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0809WPSet10" index="2057">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet10"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx080aWPSet11" index="2058">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet11"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx080bWPSet12" index="2059">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet12"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx080cWPSet13" index="2060">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet13"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx080dWPSet14" index="2061">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet14"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx080eWPSet15" index="2062">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet15"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx080fWPSet16" index="2063">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet16"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0810WPSet17" index="2064">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet17"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0811WPSet18" index="2065">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet18"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0812WPSet19" index="2066">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet19"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0813WPSet20" index="2067">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet20"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0814WPSet21" index="2068">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet21"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0815WPSet22" index="2069">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet22"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0816WPSet23" index="2070">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet23"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0817WPSet24" index="2071">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet24"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0818WPSet25" index="2072">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet25"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx0819WPSet26" index="2073">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet26"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx081aWPSet27" index="2074">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet27"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx081bWPSet28" index="2075">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet28"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx081cWPSet29" index="2076">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet29"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx081dWPSet30" index="2077">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet30"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx081eWPSet31" index="2078">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet31"/>
+				</Variable>
+				<Variable accessRights="ro" id="V_Idx081fWPSet32" index="2079">
+					<DatatypeRef datatypeId="D_WorkpieceSet"/>
+					<Name textId="TN_M_WPSet32"/>
+				</Variable>
+			</VariableCollection>
+			<ProcessDataCollection>
+				<ProcessData id="PD">
+					<ProcessDataIn id="PDI" bitLength="48">
+						<Datatype xsi:type="RecordT" bitLength="48" subindexAccessSupported="false">
+							<RecordItem subindex="1" bitOffset="47">
+								<DatatypeRef datatypeId="D_Status_Error"/>
+								<Name textId="TN_Status_Error"/>
+								<Description textId="TD_Status_Error"/>
+							</RecordItem>
+							<RecordItem subindex="2" bitOffset="46">
+								<DatatypeRef datatypeId="D_Status_DirCloseFlag"/>
+								<Name textId="TN_Status_DirCloseFlag"/>
+							</RecordItem>
+							<RecordItem subindex="3" bitOffset="45">
+								<DatatypeRef datatypeId="D_Status_DirOpenFlag"/>
+								<Name textId="TN_Status_DirOpenFlag"/>
+							</RecordItem>
+							<RecordItem subindex="4" bitOffset="44">
+								<DatatypeRef datatypeId="D_Status_Latch"/>
+								<Name textId="TN_Status_LatchDataFlag"/>
+								<Description textId="TD_Status_LatchDataFlag"/>
+							</RecordItem>
+							<RecordItem subindex="5" bitOffset="43">
+								<DatatypeRef datatypeId="D_Status_PosUndef"/>
+								<Name textId="TN_Status_PosUndefFlag"/>
+							</RecordItem>
+							<RecordItem subindex="6" bitOffset="42">
+								<DatatypeRef datatypeId="D_Status_PosClose"/>
+								<Name textId="TN_Status_PosCloseFlag"/>
+							</RecordItem>
+							<RecordItem subindex="7" bitOffset="41">
+								<DatatypeRef datatypeId="D_Status_PosGrip"/>
+								<Name textId="TN_Status_PosGripFlag"/>
+							</RecordItem>
+							<RecordItem subindex="8" bitOffset="40">
+								<DatatypeRef datatypeId="D_Status_PosOpen"/>
+								<Name textId="TN_Status_PosOpenFlag"/>
+							</RecordItem>
+							<RecordItem subindex="9" bitOffset="38">
+								<DatatypeRef datatypeId="D_Status_SysRdy"/>
+								<Name textId="TN_Status_Ready"/>
+							</RecordItem>
+							<RecordItem subindex="10" bitOffset="16">
+								<DatatypeRef datatypeId="D_ErrNo"/>
+								<Name textId="TN_ErrNo"/>
+							</RecordItem>
+							<RecordItem subindex="11" bitOffset="0">
+								<DatatypeRef datatypeId="D_Position"/>
+								<Name textId="TN_ActualPos"/>
+								<Description textId="TD_Position"/>
+							</RecordItem>
+						</Datatype>
+						<Name textId="TN_PDI"/>
+					</ProcessDataIn>
+					<ProcessDataOut id="PDO" bitLength="64">
+						<Datatype xsi:type="RecordT" bitLength="64" subindexAccessSupported="false">
+							<RecordItem subindex="1" bitOffset="48">
+								<DatatypeRef datatypeId="D_Control"/>
+								<Name textId="TN_Control"/>
+								<Description textId="TD_Control"/>
+							</RecordItem>
+							<RecordItem subindex="2" bitOffset="40">
+								<DatatypeRef datatypeId="D_GripMode"/>
+								<Name textId="TN_GripMode"/>
+								<Description textId="TD_GripMode"/>
+							</RecordItem>
+							<RecordItem subindex="3" bitOffset="32">
+								<DatatypeRef datatypeId="D_WorkpieceNo"/>
+								<Name textId="TN_WorkpieceNo"/>
+								<Description textId="TD_WorkpieceNo"/>
+							</RecordItem>
+							<RecordItem subindex="4" bitOffset="16">
+								<DatatypeRef datatypeId="D_Position"/>
+								<Name textId="TN_GripPos"/>
+								<Description textId="TD_Position"/>
+							</RecordItem>
+							<RecordItem subindex="5" bitOffset="8">
+								<DatatypeRef datatypeId="D_GripForce"/>
+								<Name textId="TN_GripForce"/>
+								<Description textId="TD_GripForce"/>
+							</RecordItem>
+							<RecordItem subindex="6" bitOffset="0">
+								<DatatypeRef datatypeId="D_GrippingTolerance"/>
+								<Name textId="TN_GripTol"/>
+								<Description textId="TD_GripTol"/>
+							</RecordItem>
+						</Datatype>
+						<Name textId="TN_PDO"/>
+					</ProcessDataOut>
+				</ProcessData>
+			</ProcessDataCollection>
+			<EventCollection>
+			</EventCollection>
+			<UserInterface>
+				<ProcessDataRefCollection>
+					<ProcessDataRef processDataId="PDI">
+						<ProcessDataRecordItemInfo subindex="1"/>
+						<ProcessDataRecordItemInfo subindex="2"/>
+						<ProcessDataRecordItemInfo subindex="3"/>
+						<ProcessDataRecordItemInfo subindex="4"/>
+						<ProcessDataRecordItemInfo subindex="5"/>
+						<ProcessDataRecordItemInfo subindex="6"/>
+						<ProcessDataRecordItemInfo subindex="7"/>
+						<ProcessDataRecordItemInfo subindex="8"/>
+						<ProcessDataRecordItemInfo subindex="9"/>
+						<ProcessDataRecordItemInfo subindex="10"/>
+						<ProcessDataRecordItemInfo subindex="11" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</ProcessDataRef>
+					<ProcessDataRef processDataId="PDO">
+						<ProcessDataRecordItemInfo subindex="1"/>
+						<ProcessDataRecordItemInfo subindex="3"/>
+						<ProcessDataRecordItemInfo subindex="2"/>
+						<ProcessDataRecordItemInfo subindex="5"/>
+						<ProcessDataRecordItemInfo subindex="4" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<ProcessDataRecordItemInfo subindex="6" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</ProcessDataRef>
+				</ProcessDataRefCollection>
+
+				<MenuCollection>
+					<Menu id="M_IdentObserv">
+						<VariableRef variableId="V_ProductName"/>
+						<VariableRef variableId="V_ProductID"/>
+						<VariableRef variableId="V_ProductText"/>
+						<VariableRef variableId="V_ApplicationSpecificTag" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="M_IdentMaint">
+						<VariableRef variableId="V_VendorName"/>
+						<VariableRef variableId="V_VendorText"/>
+						<VariableRef variableId="V_ProductName"/>
+						<VariableRef variableId="V_ProductID"/>
+						<VariableRef variableId="V_ProductText"/>
+						<VariableRef variableId="V_SerialNumber"/>
+						<VariableRef variableId="V_HardwareRevision"/>
+						<VariableRef variableId="V_FirmwareRevision"/>
+						<VariableRef variableId="V_ApplicationSpecificTag" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="M_IdentSpec">
+						<VariableRef variableId="V_VendorName"/>
+						<VariableRef variableId="V_VendorText"/>
+						<VariableRef variableId="V_ProductName"/>
+						<VariableRef variableId="V_ProductID"/>
+						<VariableRef variableId="V_ProductText"/>
+						<VariableRef variableId="V_SerialNumber"/>
+						<VariableRef variableId="V_HardwareRevision"/>
+						<VariableRef variableId="V_FirmwareRevision"/>
+						<VariableRef variableId="V_ApplicationSpecificTag" accessRightRestriction="rw"/>
+					</Menu>
+					<Menu id="M_ParamObs">
+						<MenuRef menuId="M_WorkpieceSet"/>
+					</Menu>
+					<Menu id="M_ParamMaint">
+						<MenuRef menuId="M_SysCmd"/>
+						<MenuRef menuId="M_WorkpieceSet"/>
+					</Menu>
+					<Menu id="M_ParamSpec">
+						<MenuRef menuId="M_SysCmd"/>
+						<MenuRef menuId="M_QuickOperation"/>
+						<MenuRef menuId="M_WorkpieceSet"/>
+					</Menu>
+					<Menu id="M_Observe">
+						<MenuRef menuId="M_PDinActual"/>
+						<MenuRef menuId="M_PDoutActual"/>
+					</Menu>
+					<Menu id="M_Diag">
+						<VariableRef variableId="V_Idx0043Temperature" accessRightRestriction="ro" displayFormat="Dec.0"  gradient="1" unitCode="1001"/>
+						<VariableRef variableId="V_Idx0041ErrorNo" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_Idx0045ErrorMessage" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_ErrorCount" accessRightRestriction="ro"/>
+						<VariableRef variableId="V_Idx0042CycleCounter" accessRightRestriction="ro"/>
+					</Menu>
+					<Menu id="M_QuickOperation">
+						<Name textId="TN_M_QuickOperation"/>
+						<VariableRef variableId="V_SystemCommand" accessRightRestriction="wo">
+							<Button buttonValue="160">
+								<Description textId="TD_Enable"/>
+								<ActionStartedMessage textId="TA_Enable"/>
+							</Button>
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand" accessRightRestriction="wo">
+							<Button buttonValue="161">
+								<Description textId="TD_Close"/>
+							</Button>
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand" accessRightRestriction="wo">
+							<Button buttonValue="162">
+								<Description textId="TD_Open"/>
+							</Button>
+						</VariableRef>
+					</Menu>
+					<Menu id="M_SysCmd">
+						<Name textId="TN_M_SysCmd"/>
+						<VariableRef variableId="V_SystemCommand" accessRightRestriction="wo">
+							<Button buttonValue="130"/>
+						</VariableRef>
+					</Menu>
+					<Menu id="M_PDinActual">
+						<Name textId="TN_M_PDinActualVal"/>
+						<VariableRef variableId="V_Idx0100ActualPosition" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" unitCode="1013"/>
+						<VariableRef variableId="V_Idx0040Status" accessRightRestriction="ro" />
+						<VariableRef variableId="V_Idx0041ErrorNo" accessRightRestriction="ro" />
+					</Menu>
+					<Menu id="M_PDoutActual">
+						<Name textId="TN_M_PDoutActualVal"/>
+						<VariableRef variableId="V_Idx0102WorkpieceNo" accessRightRestriction="ro" />
+						<VariableRef variableId="V_Idx0103GripMode" accessRightRestriction="ro" />
+						<VariableRef variableId="V_Idx0105GrippingForce" accessRightRestriction="ro" />
+						<VariableRef variableId="V_Idx0101GrippingPosition" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" unitCode="1013"/>
+						<VariableRef variableId="V_Idx0104GrippingTolerance" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet">
+						<Name textId="TN_M_WPSet"/>
+						<MenuRef menuId="M_WorkpieceSet1"/>
+						<MenuRef menuId="M_WorkpieceSet2"/>
+						<MenuRef menuId="M_WorkpieceSet3"/>
+						<MenuRef menuId="M_WorkpieceSet4"/>
+						<MenuRef menuId="M_WorkpieceSet5"/>
+						<MenuRef menuId="M_WorkpieceSet6"/>
+						<MenuRef menuId="M_WorkpieceSet7"/>
+						<MenuRef menuId="M_WorkpieceSet8"/>
+						<MenuRef menuId="M_WorkpieceSet9"/>
+						<MenuRef menuId="M_WorkpieceSet10"/>
+						<MenuRef menuId="M_WorkpieceSet11"/>
+						<MenuRef menuId="M_WorkpieceSet12"/>
+						<MenuRef menuId="M_WorkpieceSet13"/>
+						<MenuRef menuId="M_WorkpieceSet14"/>
+						<MenuRef menuId="M_WorkpieceSet15"/>
+						<MenuRef menuId="M_WorkpieceSet16"/>
+						<MenuRef menuId="M_WorkpieceSet17"/>
+						<MenuRef menuId="M_WorkpieceSet18"/>
+						<MenuRef menuId="M_WorkpieceSet19"/>
+						<MenuRef menuId="M_WorkpieceSet20"/>
+						<MenuRef menuId="M_WorkpieceSet21"/>
+						<MenuRef menuId="M_WorkpieceSet22"/>
+						<MenuRef menuId="M_WorkpieceSet23"/>
+						<MenuRef menuId="M_WorkpieceSet24"/>
+						<MenuRef menuId="M_WorkpieceSet25"/>
+						<MenuRef menuId="M_WorkpieceSet26"/>
+						<MenuRef menuId="M_WorkpieceSet27"/>
+						<MenuRef menuId="M_WorkpieceSet28"/>
+						<MenuRef menuId="M_WorkpieceSet29"/>
+						<MenuRef menuId="M_WorkpieceSet30"/>
+						<MenuRef menuId="M_WorkpieceSet31"/>
+						<MenuRef menuId="M_WorkpieceSet32"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet1">
+						<Name textId="TN_M_WPSet1"/>
+						<RecordItemRef variableId="V_Idx0800WPSet1" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0800WPSet1" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0800WPSet1" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0800WPSet1" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet2">
+						<Name textId="TN_M_WPSet2"/>
+						<RecordItemRef variableId="V_Idx0801WPSet2" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0801WPSet2" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0801WPSet2" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0801WPSet2" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet3">
+						<Name textId="TN_M_WPSet3"/>
+						<RecordItemRef variableId="V_Idx0802WPSet3" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0802WPSet3" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0802WPSet3" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0802WPSet3" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet4">
+						<Name textId="TN_M_WPSet4"/>
+						<RecordItemRef variableId="V_Idx0803WPSet4" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0803WPSet4" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0803WPSet4" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0803WPSet4" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet5">
+						<Name textId="TN_M_WPSet5"/>
+						<RecordItemRef variableId="V_Idx0804WPSet5" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0804WPSet5" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0804WPSet5" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0804WPSet5" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet6">
+						<Name textId="TN_M_WPSet6"/>
+						<RecordItemRef variableId="V_Idx0805WPSet6" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0805WPSet6" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0805WPSet6" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0805WPSet6" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet7">
+						<Name textId="TN_M_WPSet7"/>
+						<RecordItemRef variableId="V_Idx0806WPSet7" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0806WPSet7" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0806WPSet7" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0806WPSet7" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet8">
+						<Name textId="TN_M_WPSet8"/>
+						<RecordItemRef variableId="V_Idx0807WPSet8" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0807WPSet8" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0807WPSet8" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0807WPSet8" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet9">
+						<Name textId="TN_M_WPSet9"/>
+						<RecordItemRef variableId="V_Idx0808WPSet9" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0808WPSet9" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0808WPSet9" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0808WPSet9" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet10">
+						<Name textId="TN_M_WPSet10"/>
+						<RecordItemRef variableId="V_Idx0809WPSet10" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0809WPSet10" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0809WPSet10" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0809WPSet10" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet11">
+						<Name textId="TN_M_WPSet11"/>
+						<RecordItemRef variableId="V_Idx080aWPSet11" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080aWPSet11" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080aWPSet11" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx080aWPSet11" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet12">
+						<Name textId="TN_M_WPSet12"/>
+						<RecordItemRef variableId="V_Idx080bWPSet12" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080bWPSet12" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080bWPSet12" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx080bWPSet12" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet13">
+						<Name textId="TN_M_WPSet13"/>
+						<RecordItemRef variableId="V_Idx080cWPSet13" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080cWPSet13" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080cWPSet13" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx080cWPSet13" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet14">
+						<Name textId="TN_M_WPSet14"/>
+						<RecordItemRef variableId="V_Idx080dWPSet14" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080dWPSet14" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080dWPSet14" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx080dWPSet14" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet15">
+						<Name textId="TN_M_WPSet15"/>
+						<RecordItemRef variableId="V_Idx080eWPSet15" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080eWPSet15" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080eWPSet15" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx080eWPSet15" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet16">
+						<Name textId="TN_M_WPSet16"/>
+						<RecordItemRef variableId="V_Idx080fWPSet16" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080fWPSet16" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx080fWPSet16" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx080fWPSet16" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet17">
+						<Name textId="TN_M_WPSet17"/>
+						<RecordItemRef variableId="V_Idx0810WPSet17" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0810WPSet17" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0810WPSet17" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0810WPSet17" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet18">
+						<Name textId="TN_M_WPSet18"/>
+						<RecordItemRef variableId="V_Idx0811WPSet18" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0811WPSet18" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0811WPSet18" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0811WPSet18" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet19">
+						<Name textId="TN_M_WPSet19"/>
+						<RecordItemRef variableId="V_Idx0812WPSet19" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0812WPSet19" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0812WPSet19" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0812WPSet19" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet20">
+						<Name textId="TN_M_WPSet20"/>
+						<RecordItemRef variableId="V_Idx0813WPSet20" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0813WPSet20" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0813WPSet20" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0813WPSet20" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet21">
+						<Name textId="TN_M_WPSet21"/>
+						<RecordItemRef variableId="V_Idx0814WPSet21" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0814WPSet21" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0814WPSet21" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0814WPSet21" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet22">
+						<Name textId="TN_M_WPSet22"/>
+						<RecordItemRef variableId="V_Idx0815WPSet22" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0815WPSet22" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0815WPSet22" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0815WPSet22" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet23">
+						<Name textId="TN_M_WPSet23"/>
+						<RecordItemRef variableId="V_Idx0816WPSet23" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0816WPSet23" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0816WPSet23" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0816WPSet23" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet24">
+						<Name textId="TN_M_WPSet24"/>
+						<RecordItemRef variableId="V_Idx0817WPSet24" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0817WPSet24" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0817WPSet24" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0817WPSet24" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet25">
+						<Name textId="TN_M_WPSet25"/>
+						<RecordItemRef variableId="V_Idx0818WPSet25" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0818WPSet25" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0818WPSet25" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0818WPSet25" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet26">
+						<Name textId="TN_M_WPSet26"/>
+						<RecordItemRef variableId="V_Idx0819WPSet26" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0819WPSet26" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx0819WPSet26" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx0819WPSet26" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet27">
+						<Name textId="TN_M_WPSet27"/>
+						<RecordItemRef variableId="V_Idx081aWPSet27" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081aWPSet27" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081aWPSet27" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx081aWPSet27" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet28">
+						<Name textId="TN_M_WPSet28"/>
+						<RecordItemRef variableId="V_Idx081bWPSet28" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081bWPSet28" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081bWPSet28" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx081bWPSet28" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet29">
+						<Name textId="TN_M_WPSet29"/>
+						<RecordItemRef variableId="V_Idx081cWPSet29" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081cWPSet29" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081cWPSet29" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx081cWPSet29" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet30">
+						<Name textId="TN_M_WPSet30"/>
+						<RecordItemRef variableId="V_Idx081dWPSet30" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081dWPSet30" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081dWPSet30" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx081dWPSet30" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet31">
+						<Name textId="TN_M_WPSet31"/>
+						<RecordItemRef variableId="V_Idx081eWPSet31" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081eWPSet31" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081eWPSet31" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx081eWPSet31" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+					<Menu id="M_WorkpieceSet32">
+						<Name textId="TN_M_WPSet32"/>
+						<RecordItemRef variableId="V_Idx081fWPSet32" subindex="1" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081fWPSet32" subindex="2" accessRightRestriction="ro"/>
+						<RecordItemRef variableId="V_Idx081fWPSet32" subindex="3" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+						<RecordItemRef variableId="V_Idx081fWPSet32" subindex="4" accessRightRestriction="ro" displayFormat="Dec.2" gradient="0.01" offset="0.0" unitCode="1013"/>
+					</Menu>
+				</MenuCollection>
+				<ObserverRoleMenuSet>
+					<IdentificationMenu menuId="M_IdentObserv"/>
+					<ParameterMenu menuId="M_ParamObs"/>
+					<ObservationMenu menuId="M_Observe"/>
+					<DiagnosisMenu menuId="M_Diag"/>
+				</ObserverRoleMenuSet>
+				<MaintenanceRoleMenuSet>
+					<IdentificationMenu menuId="M_IdentMaint"/>
+					<ParameterMenu menuId="M_ParamMaint"/>
+					<ObservationMenu menuId="M_Observe"/>
+					<DiagnosisMenu menuId="M_Diag"/>
+				</MaintenanceRoleMenuSet>
+				<SpecialistRoleMenuSet>
+					<IdentificationMenu menuId="M_IdentSpec"/>
+					<ParameterMenu menuId="M_ParamSpec"/>
+					<ObservationMenu menuId="M_Observe"/> 			
+					<DiagnosisMenu menuId="M_Diag"/>
+				</SpecialistRoleMenuSet>
+			</UserInterface>
+		</DeviceFunction>
+	</ProfileBody>
+	<CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.1">
+		<TransportLayers>
+			<PhysicalLayer minCycleTime="5000" sioSupported="false" bitrate="COM3" mSequenceCapability="43">
+				<Connection xsi:type="M12-5ConnectionT">
+					<ProductRef productId="8103809"/>
+					<Description textId="TD_Connection"/>
+					<Wire1 function="L+"/>
+					<Wire2 color="WH" function="P24"/>
+					<Wire3 function="L-"/>
+					<Wire4 function="C/Q"/>
+					<Wire5 color="GY" function="N24"/>
+				</Connection>
+			</PhysicalLayer>
+		</TransportLayers>
+		<Test>
+			<Config1 index="200" testValue="0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00"/>
+			<Config2 index="1000" testValue="0x00"/>
+			<Config3 index="200" testValue="0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00"/>
+		</Test>
+	</CommNetworkProfile>
+	<ExternalTextCollection>
+		<PrimaryLanguage xml:lang="en">
+			<Text id="T_VendorText" value="Festo. At the forefront of industrial automation."/>
+			<Text id="T_VendorUrl" value="http://www.festo.com"/>
+			<Text id="T_DeviceName" value="EHPS-16-A-LK"/>
+			<Text id="T_DeviceFamily" value="EHPS"/>
+			<Text id="TN_ProductName1" value="EHPS-16-A-LK"/>
+			<Text id="TD_ProductText1" value="Parallel gripper"/>
+			<Text id="TN_M_SysCmd" value="Command Buttons"/>
+			<Text id="TN_M_QuickOperation" value="QuickOperation"/>
+			<Text id="TN_SystemCommand_GripperOpen" value="Open Gripper"/>
+			<Text id="TD_Open" value="Gripper jaws move apart"/>
+			<Text id="TN_SystemCommand_GripperClose" value="Close Gripper"/>
+			<Text id="TD_Close" value="Gripper jaws move together"/>
+			<Text id="TN_SystemCommand_Activate" value="Enable Gripper"/>
+			<Text id="TD_Enable" value="Enable gripper with standard parameters: Force = 1, Mode = Universal"/>
+			<Text id="TA_Enable" value="Gripper access by SystemCommands is now enabled"/>
+
+			<Text id="TN_Status" value="StatusWord"/>
+			<Text id="TN_ErrNo" value="ErrorNumber"/>
+			<Text id="TN_CycleCounter" value="CycleCounter"/>
+			<Text id="TN_Temperature" value="Temperature"/>
+			<Text id="TN_Control" value="ControlWord"/>
+			<Text id="TD_Control" value="Main command to operate the gripper"/>
+			<Text id="TN_ErrorMessage" value="ErrorMessage"/>
+			<Text id="TD_ErrorMessage" value="Text description of pending error"/>
+
+			<Text id="TN_ActualPos" value="ActualPosition"/>
+			<Text id="TN_GripMode" value="GrippingMode"/>
+			<Text id="TD_GripMode" value="Operating mode to adjust force and velocity to gripping tasks and use max. preformance to reestablish the initial position."/>
+			<Text id="TN_GripPos" value="GrippingPosition"/>
+			<Text id="TD_Position" value="0 mm: gripper open; 21,5 mm: gripper closed"/>
+			<Text id="TN_WorkpieceNo" value="WorkpieceNo"/>
+			<Text id="TD_WorkpieceNo" value="Number of workpiece parameter set"/>
+			<Text id="TN_GripTol" value="GrippingTolerance"/>
+			<Text id="TD_GripTol" value="Tolerance of gripping position +/-"/>
+			<Text id="TN_GripForce" value="GrippingForce"/>
+			<Text id="TD_GripForce" value="Mooving speed depends on force setting"/>
+
+			<Text id="TN_Control_Idle" value="Idle"/>
+			<Text id="TN_Control_LatchData" value="LatchData"/>
+			<Text id="TN_Control_ResDirFlag" value="ResetDirectionFlag"/>
+			<Text id="TN_Control_TeachGripPos" value="TeachGrippingPosition"/>
+			<Text id="TN_Control_FindEndPos" value="FindNewEndPositions"/>
+			<Text id="TN_Control_Open" value="Open"/>
+			<Text id="TN_Control_Close" value="Close"/>
+			<Text id="TN_Control_ResetError" value="ResetError"/>
+			<Text id="TN_Control_StoreWPno" value="Store"/>
+			<Text id="TN_GripMode_Invalid" value="Invalid"/>
+			<Text id="TN_GripMode_Universal" value="Universal"/>
+			<Text id="TN_GripMode_ext" value="External Gripping"/>
+			<Text id="TN_GripMode_int" value="Internal Gripping"/>
+			<Text id="TN_GripForce_Invalid" value="Invalid"/>
+			<Text id="TN_GripForce_1" value="1: 50% max. force"/>
+			<Text id="TN_GripForce_2" value="2: 70% max. force"/>
+			<Text id="TN_GripForce_3" value="3: 85% max. force"/>
+			<Text id="TN_GripForce_4" value="4: 100% max force"/>
+			<Text id="TN_Status_ErrorTrue" value="Error"/>
+			<Text id="TN_Status_ErrorFalse" value="No Error"/>
+			<Text id="TN_Status_Error" value="Error"/>
+			<Text id="TD_Status_Error" value="Error Status"/>
+			<Text id="TN_Status_DirOpenFlag" value="DirectionOpenFlag"/>
+			<Text id="TD_Status_DirOpenFlag" value="Direction of last movement was opening"/>
+			<Text id="TN_Status_DirCloseFlag" value="DirectionCloseFlag"/>
+			<Text id="TD_Status_DirCloseFlag" value="Direction of last movement was closing"/>
+			<Text id="TN_Status_LatchDataFlag" value="LatchDataFlag"/>			
+			<Text id="TD_Status_LatchDataFlag" value="Datas are enabled"/>			
+			<Text id="TN_Status_LatchDataOk" value="Latched"/>
+			<Text id="TN_Status_PosCloseFlag" value="ClosedPositionFlag"/>			
+			<Text id="TN_Status_PosClose" value="Closed"/>			
+			<Text id="TN_Status_PosGripFlag" value="GrippedPositionFlag"/>			
+			<Text id="TN_Status_PosGrip" value="Gripped"/>			
+			<Text id="TN_Status_PosOpenFlag" value="OpenedPositionFlag"/>			
+			<Text id="TN_Status_PosOpen" value="Opened"/>			
+			<Text id="TN_Status_DirOpen" value="Open"/>
+			<Text id="TN_Status_DirClose" value="Close"/>
+			<Text id="TN_Status_PosUndefFlag" value="UndefinedPositionFlag"/>
+			<Text id="TN_Status_PosUndef" value="Undefined"/>
+			<Text id="TN_Status_Ready" value="Ready"/>
+			<Text id="TN_Status_DeviceActive" value="Device active"/>
+			<Text id="TN_Status_DeviceNotActive" value="Device inactive"/>
+			<Text id="TN_Status_Inactive" value="inactive"/>
+			<Text id="TN_Err_x000" value="Status ok, device is ready"/>
+			<Text id="TN_Err_x100" value="Power supply error"/>
+			<Text id="TN_Err_x101" value="Temperature too high"/>
+			<Text id="TN_Err_x102" value="Temperature too low"/>
+			<Text id="TN_Err_x10A" value="Actuator under voltage during movement"/>
+			<Text id="TN_Err_x300" value="ControlWord not plausible"/>
+			<Text id="TN_Err_x301" value="GrippingPosition not plausible"/>
+			<Text id="TN_Err_x302" value="GrippingForce not plausible"/>
+			<Text id="TN_Err_x304" value="GrippingTolerance not plausible"/>
+			<Text id="TN_Err_x305" value="Reference position error"/>
+			<Text id="TN_Err_x306" value="GrippingMode not plausible"/>
+			<Text id="TN_Err_x307" value="Drive command can not be executed"/>
+			<Text id="TN_Err_x308" value="WorkpieceNo not plausible"/>
+			<Text id="TN_Err_x309" value="GrippingPosition not latched"/>
+			<Text id="TN_Err_x30D" value="GrippingForce not latched"/>
+			<Text id="TN_Err_x30F" value="GrippingTolerance not latched"/>
+			<Text id="TN_Err_x310" value="GrippingMode not latched"/>
+			<Text id="TN_Err_x311" value="WorkpieceNo not latched"/>
+			<Text id="TN_Err_x312" value="Initial handshake missing"/>
+			<Text id="TN_Err_x400" value="Gripper blocked"/>
+			<Text id="TN_Err_x406" value="System error / internal error"/>
+			<Text id="TN_M_WPSet" value="WorkpieceSet"/>
+			<Text id="TN_M_WPSet1" value="Workpiece Parameter Set 1 "/>
+			<Text id="TN_M_WPSet2" value="Workpiece Parameter Set 2 "/>
+			<Text id="TN_M_WPSet3" value="Workpiece Parameter Set 3 "/>
+			<Text id="TN_M_WPSet4" value="Workpiece Parameter Set 4 "/>
+			<Text id="TN_M_WPSet5" value="Workpiece Parameter Set 5 "/>
+			<Text id="TN_M_WPSet6" value="Workpiece Parameter Set 6 "/>
+			<Text id="TN_M_WPSet7" value="Workpiece Parameter Set 7 "/>
+			<Text id="TN_M_WPSet8" value="Workpiece Parameter Set 8 "/>
+			<Text id="TN_M_WPSet9" value="Workpiece Parameter Set 9 "/>
+			<Text id="TN_M_WPSet10" value="Workpiece Parameter Set 10 "/>
+			<Text id="TN_M_WPSet11" value="Workpiece Parameter Set 11 "/>
+			<Text id="TN_M_WPSet12" value="Workpiece Parameter Set 12 "/>
+			<Text id="TN_M_WPSet13" value="Workpiece Parameter Set 13 "/>
+			<Text id="TN_M_WPSet14" value="Workpiece Parameter Set 14 "/>
+			<Text id="TN_M_WPSet15" value="Workpiece Parameter Set 15 "/>
+			<Text id="TN_M_WPSet16" value="Workpiece Parameter Set 16 "/>
+			<Text id="TN_M_WPSet17" value="Workpiece Parameter Set 17 "/>
+			<Text id="TN_M_WPSet18" value="Workpiece Parameter Set 18 "/>
+			<Text id="TN_M_WPSet19" value="Workpiece Parameter Set 19 "/>
+			<Text id="TN_M_WPSet20" value="Workpiece Parameter Set 20 "/>
+			<Text id="TN_M_WPSet21" value="Workpiece Parameter Set 21 "/>
+			<Text id="TN_M_WPSet22" value="Workpiece Parameter Set 22 "/>
+			<Text id="TN_M_WPSet23" value="Workpiece Parameter Set 23 "/>
+			<Text id="TN_M_WPSet24" value="Workpiece Parameter Set 24 "/>
+			<Text id="TN_M_WPSet25" value="Workpiece Parameter Set 25 "/>
+			<Text id="TN_M_WPSet26" value="Workpiece Parameter Set 26 "/>
+			<Text id="TN_M_WPSet27" value="Workpiece Parameter Set 27 "/>
+			<Text id="TN_M_WPSet28" value="Workpiece Parameter Set 28 "/>
+			<Text id="TN_M_WPSet29" value="Workpiece Parameter Set 29 "/>
+			<Text id="TN_M_WPSet30" value="Workpiece Parameter Set 30 "/>
+			<Text id="TN_M_WPSet31" value="Workpiece Parameter Set 31 "/>
+			<Text id="TN_M_WPSet32" value="Workpiece Parameter Set 32 "/>
+			<Text id="TN_M_PDinActualVal" value="PDin Parameter Actual Values"/>
+			<Text id="TN_M_PDoutActualVal" value="PDout Parameter Actual Values"/>
+			<Text id="TN_PDI" value="ProcessDataInput"/>
+			<Text id="TN_PDO" value="ProcessDataOutput"/>
+			<Text id="TD_Connection" value="Pin 2 and 5 has to be used to provide actuator power"/>
+		</PrimaryLanguage>
+	</ExternalTextCollection>
+	<Stamp crc="2084394401"><Checker name="IODD-Checker V1.1.4" version="V1.1.4.0"/></Stamp>
+</IODevice>

@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.12.3.127 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="EHPS_16_A_LK_IODD1_1" Type="FBD.IOLink.GenericDeviceDTM.DTMCore.EHPS-16-A-LK IODD1.1" Version="1.1.2" OrderNumber="EHPS-16-A-LK IODD1.1">
+    <Connection Connector="IO-Link1" TargetModule="X67DS438A" TargetConnector="IF3" />
+    <Parameter ID="DtmId" Value="e8a7041a-f6f3-4481-942c-a2020971e255" />
+  </Module>
   <Module Name="OY1P303P0102_IODD1_1" Type="FBD.IOLink.GenericDeviceDTM.DTMCore.OY1P303P0102 IODD1.1" Version="1.6" OrderNumber="OY1P303P0102 IODD1.1">
     <Connection Connector="IO-Link1" TargetModule="X67DS438A" TargetConnector="IF1" />
     <Parameter ID="DtmId" Value="ccf85e98-37e2-4583-acd5-1479eaefeef7" />
