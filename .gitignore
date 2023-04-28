@@ -6,13 +6,14 @@
 # Ignore AR versions as those are not considered part of the project
 /SimpleProject/AS/System/
 # Ignore build results
-/SimpleProject/Binaries/
+SimpleProject/Binaries/
 # Ignore debugging configurations (Watch,...)
 /SimpleProject/Diagnosis/
 # Ignore Temporary Safety files
 /SimpleProject/Physical/*/*/*/DLFiles/
 # Ignore standard temp folder
-/SimpleProject/Temp/
+SimpleProject/Temp/
+
 # Ignore upgrades as those are not considered part of the project source code
 /SimpleProject/Upgrades/
 # Ignore user settings file
